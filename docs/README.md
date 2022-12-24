@@ -40,5 +40,6 @@
   - `Alpine.store()` 使用 `$store` 声明可以从任何地方访问的全局、反应性数据
   - `Alpine.bind()`
 
-- 基础
-  - [安装](./guide/install.md)
+## 章节目录
+
+- [安装](./guide/install.md)
