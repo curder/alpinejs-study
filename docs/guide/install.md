@@ -17,11 +17,13 @@
 <head>
     <title>Alpine.js</title>
     <!--...-->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> // [!code focus]
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    // [!code focus]
 </head>
 <!--...-->
 </html>
 ```
+
 就是这样，Alpine.js 会自行初始化。
 
 生产环境中，建议在链接中锁定特定版本号，以避免新版本中的变更造成问题。
@@ -29,6 +31,7 @@
 例如，锁定版本为 3.10.5 (最新版本):
 
 ```html
+
 <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
 ```
 
@@ -57,3 +60,30 @@ window.Alpine = Alpine // 可选，对于灵活性来说是很好的。例如当
 
 Alpine.start()
 ```
+
+## 简单使用 Alpine.js
+
+为了验证 Alpine.js 的安装是否生效，下面分别使用到 `x-data` 和 `x-text` 指令。
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+<div x-data="{ message: 'hello world' }"> // [!code focus]
+    <span x-text="message"></span> // [!code focus]
+</div> // [!code focus]
+</body>
+</html>
+```
+
+- 使用 `x-data` 指令定义一个新的组件作用域。
+- 使用 `x-text` 指令更新的是元素的 `innerText`。
