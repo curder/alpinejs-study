@@ -1,0 +1,15 @@
+{
+  "name": "alpine.js-study",
+  "description": "Alpine.js Study",
+  "repository": "git@github.com:curder/alpine.js-study.git",
+  "author": "curder <q.curder@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.33"
+  }
+}
