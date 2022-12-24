@@ -1,6 +1,6 @@
 # 安装
 
-Alpine.js 当前支持使用两种方式添加到项目中：
+[Alpine.js](https://alpinejs.dev/) 当前支持使用两种方式添加到项目中：
 
 - 从 `<script>` 脚本标签引用它
 - 将其作为模块导入
