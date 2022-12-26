@@ -50,6 +50,7 @@ function sidebarGuide() {
                 {text: "x-if", link: "/guide/x-if"},
                 {text: "x-for", link: "/guide/x-for"},
                 {text: "x-bind", link: "/guide/x-bind"},
+                {text: "x-on", link: "/guide/x-on"},
             ]
         },
     ];

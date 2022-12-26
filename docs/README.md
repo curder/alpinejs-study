@@ -15,7 +15,7 @@
   - [`x-if`](./guide/x-if.md)
   - [`x-for`](./guide/x-for.md)
   - [`x-bind`](./guide/x-bind.md)
-  - `x-on`
+  - [`x-on`](./guide/x-on.md)
   - `x-model`
   - `x-modelable`
   - `x-effect`
@@ -53,3 +53,4 @@
 - [x-if](./guide/x-if.md)
 - [x-for](./guide/x-for.md)
 - [x-bind](./guide/x-bind.md)
+- [x-on](./guide/x-on.md)
