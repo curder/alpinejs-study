@@ -40,7 +40,8 @@ function sidebarGuide() {
             items: [
                 {text: "安装", link: "/guide/install"},
                 {text: "x-data", link: "/guide/x-data"},
-                {text: "x-text", link: "/guide/x-text"}
+                {text: "x-text", link: "/guide/x-text"},
+                {text: "x-html", link: "/guide/x-html"},
             ]
         },
     ];
