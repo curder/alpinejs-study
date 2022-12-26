@@ -10,16 +10,16 @@
   - [`x-html`](./guide/x-html.md)
   - [`x-init`](./guide/x-init.md)
   - [`x-show`](./guide/x-show.md)
+  - [`x-cloak`](./guide/x-cloak.md)
+  - [`x-transition`](./guide/x-transition.md)
   - `x-bind`
   - `x-on`
   - `x-model`
   - `x-modelable`
   - `x-for`
-  - `x-transition`
   - `x-effect`
   - `x-ignore`
   - `x-ref`
-  - [`x-cloak`](./guide/x-cloak.md)
   - `x-teleport`
   - `x-if`
   - `x-id`
@@ -49,3 +49,4 @@
 - [x-init](./guide/x-init.md)
 - [x-show](./guide/x-show.md)
 - [x-cloak](./guide/x-cloak.md)
+- [x-transition](./guide/x-transition.md)

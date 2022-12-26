@@ -18,7 +18,7 @@
 
 ## 过渡效果
 
-如果要对 `x-show` 行为应用平滑过渡，可以将它与 `x-transition` 结合使用。例如：
+如果要对 `x-show` 行为应用平滑过渡，可以将它与 [`x-transition`](./x-transition.md) 结合使用。例如：
 
 ```html {4}
 <div x-data="{ open: false }">

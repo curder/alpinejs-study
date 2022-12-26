@@ -45,7 +45,8 @@ function sidebarGuide() {
                 {text: "x-html", link: "/guide/x-html"},
                 {text: "x-init", link: "/guide/x-init"},
                 {text: "x-show", link: "/guide/x-show"},
-                {text: 'x-cloak', link: "/guide/x-cloak"},
+                {text: "x-cloak", link: "/guide/x-cloak"},
+                {text: "x-transition", link: "/guide/x-transition"},
             ]
         },
     ];
