@@ -47,6 +47,7 @@ function sidebarGuide() {
                 {text: "x-show", link: "/guide/x-show"},
                 {text: "x-cloak", link: "/guide/x-cloak"},
                 {text: "x-transition", link: "/guide/x-transition"},
+                {text: "x-if", link: "/guide/x-if"},
             ]
         },
     ];

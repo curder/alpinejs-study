@@ -12,6 +12,7 @@
   - [`x-show`](./guide/x-show.md)
   - [`x-cloak`](./guide/x-cloak.md)
   - [`x-transition`](./guide/x-transition.md)
+  - [`x-if`](./guide/x-if.md)
   - `x-bind`
   - `x-on`
   - `x-model`
@@ -21,7 +22,6 @@
   - `x-ignore`
   - `x-ref`
   - `x-teleport`
-  - `x-if`
   - `x-id`
 
 - 属性
@@ -50,3 +50,4 @@
 - [x-show](./guide/x-show.md)
 - [x-cloak](./guide/x-cloak.md)
 - [x-transition](./guide/x-transition.md)
+- [x-if](./guide/x-if.md)
