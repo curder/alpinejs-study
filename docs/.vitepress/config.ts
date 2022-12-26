@@ -39,6 +39,7 @@ function sidebarGuide() {
             collapsed: false,
             items: [
                 {text: "安装", link: "/guide/install"},
+                {text: "x-data", link: "/guide/x-data"}
             ]
         },
     ];
