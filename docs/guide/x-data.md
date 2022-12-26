@@ -71,10 +71,10 @@ Alpine 中的一切都以 `x-data` 指令开始。
 <button type="button" x-on:click="toggle">Toggle</button>  // [!code ++]
 ```
 
-## getters
+## Getters
 
 当方法的唯一目的是根据其他状态返回数据时，可以使用 JavaScript
-的 [getter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get)。
+的 [Getter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/get)。
 
 使用 getter `isOpen` 重构组件而不是直接访问 `open` 状态。
 
@@ -110,6 +110,26 @@ Alpine 中的一切都以 `x-data` 指令开始。
     <span x-text="time"></span>
 </div>
 ```
+
+## Setters
+
+也可以使用 JavaScript 的 [Setter](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/set)
+
+使用 setter `isOpen` 重构组件而不是直接设置 `open` 状态。
+
+```html
+<div x-data="{
+    open: false,
+    get isOpen() { return this.open },
+    set isOpen(open) { this.open = open },
+    toggle() { this.isOpen = ! this.isOpen }
+}">
+    <button type="button" x-on:click="toggle">Toggle</button>
+    <div x-show="isOpen">Content</div>
+</div>
+```
+
+`toggle` 方法现在依赖于 `getter isOpen` 和 `setter isOpen`，而不是直接依赖于 `open` 状态。
 
 
 ## 可复用的数据

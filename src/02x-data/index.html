@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+<!--0. Toggle-->
+<div x-data="{open: false}">
+    <button type="button" x-on:click="open = !open">Toggle</button>
+    <div x-show="open">Content...</div>
+</div>
+
+<!--1. Scope-->
+<div x-data="{ foo: 'bar' }">
+    <span x-text="foo"><!-- Will output: "bar" --></span>
+
+    <div x-data="{ bar: 'baz' }">
+        <span x-text="foo"><!-- Will output: "bar" --></span>
+
+        <div x-data="{ foo: 'bob' }">
+            <span x-text="foo"><!-- Will output: "bob" --></span>
+        </div>
+    </div>
+</div>
+
+<!--2. Method-->
+<div x-data="{ open: false, toggle() { this.open = ! this.open } }">
+    <button type="button" x-on:click="toggle()">Toggle</button>
+    <div x-show="open">Content...</div>
+</div>
+
+<!--3. Getter-->
+<div x-data="{
+    open: false,
+    get isOpen() { return this.open },
+    toggle() { this.open = ! this.open }
+}">
+    <button type="button" x-on:click="toggle">Toggle</button>
+    <div x-show="isOpen">Content</div>
+</div>
+
+<!--4. Setter-->
+<div x-data="{
+        open: false,
+        get isOpen() { return this.open },
+        set isOpen(open) { this.open = open },
+        toggle() { this.isOpen = ! this.isOpen }
+}">
+    <button type="button" x-on:click="toggle">Toggle</button>
+    <div x-show="isOpen">Content</div>
+</div>
+
+<!--5. Re-usable Data-->
+<div x-data="dropdown">
+    <button type="button" x-on:click="toggle">Toggle</button>
+    <div x-show="isOpen">Content</div>
+</div>
+<script>
+    document.addEventListener('alpine:init', function () {
+        Alpine.data('dropdown', function () {
+            return {
+                open: false,
+                get isOpen() {
+                    return this.open
+                },
+                toggle() {
+                    this.open = !this.open
+                }
+            }
+        })
+    });
+</script>
+
+<!--6. Data Less Component-->
+<div x-data></div>
+
+<!--7. Signal Element Component-->
+<!--Before-->
+<div x-data="{ open: true }">
+    <button type="button" x-show="open" x-on:click="open = false">Click to Hide Me</button>
+</div>
+<!--After-->
+<button x-data="{ open: true }" type="button" x-show="open" x-on:click="open = false">Click to Hide Me</button>
+</body>
+</html>
