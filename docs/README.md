@@ -13,11 +13,11 @@
   - [`x-cloak`](./guide/x-cloak.md)
   - [`x-transition`](./guide/x-transition.md)
   - [`x-if`](./guide/x-if.md)
+  - [`x-for`](./guide/x-for.md)
   - `x-bind`
   - `x-on`
   - `x-model`
   - `x-modelable`
-  - `x-for`
   - `x-effect`
   - `x-ignore`
   - `x-ref`
@@ -51,3 +51,4 @@
 - [x-cloak](./guide/x-cloak.md)
 - [x-transition](./guide/x-transition.md)
 - [x-if](./guide/x-if.md)
+- [x-for](./guide/x-for.md)

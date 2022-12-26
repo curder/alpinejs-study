@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+
+<!--01. x-for-->
+<ul x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
+    <template x-for="color in colors">
+        <li x-text="color"></li>
+    </template>
+</ul>
+
+<!--02. accessing indexes-->
+<ul x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
+    <template x-for="(color, index) in colors">
+        <li>
+            <span x-text="`${index} : ${color}`"></span>
+        </li>
+    </template>
+</ul>
+
+<!--03. iterating over a range-->
+<ul x-data>
+    <template x-for="i in 5">
+        <li x-text="i"></li>
+    </template>
+</ul>
+
+</body>
+</html>
