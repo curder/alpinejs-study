@@ -8,8 +8,8 @@
   - [`x-data`](./guide/x-data.md)
   - [`x-text`](./guide/x-text.md)
   - [`x-html`](./guide/x-html.md)
-  - `x-init`
-  - `x-show`
+  - [`x-init`](./guide/x-init.md)
+  - [`x-show`](./guide/x-show.md)
   - `x-bind`
   - `x-on`
   - `x-model`
@@ -46,3 +46,5 @@
 - [x-data](./guide/x-data.md)
 - [x-text](./guide/x-text.md)
 - [x-html](./guide/x-html.md)
+- [x-init](./guide/x-init.md)
+- [x-show](./guide/x-show.md)

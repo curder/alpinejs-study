@@ -43,6 +43,7 @@ function sidebarGuide() {
                 {text: "x-text", link: "/guide/x-text"},
                 {text: "x-html", link: "/guide/x-html"},
                 {text: "x-init", link: "/guide/x-init"},
+                {text: "x-show", link: "/guide/x-show"},
             ]
         },
     ];
