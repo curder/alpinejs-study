@@ -43,3 +43,6 @@
 ## 章节目录
 
 - [安装](./guide/install.md)
+- [x-data](./guide/x-data.md)
+- [x-text](./guide/x-text.md)
+- [x-html](./guide/x-html.md)
