@@ -10,6 +10,7 @@ export default defineConfig({
         // logo: "https://alpinejs.dev/alpine_long.svg",
         // siteTitle: "Alpine.js 学习",
         outlineTitle: "章节导航",
+        outline: 'deep',
         lastUpdatedText: "最后更新时间",
         editLink: {
             pattern: "https://github.com/curder/alpine.js-study/edit/master/docs/:path",
