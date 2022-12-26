@@ -19,7 +19,7 @@
   - `x-effect`
   - `x-ignore`
   - `x-ref`
-  - `x-cloak`
+  - [`x-cloak`](./guide/x-cloak.md)
   - `x-teleport`
   - `x-if`
   - `x-id`
@@ -48,3 +48,4 @@
 - [x-html](./guide/x-html.md)
 - [x-init](./guide/x-init.md)
 - [x-show](./guide/x-show.md)
+- [x-cloak](./guide/x-cloak.md)
