@@ -6,20 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        [x-cloak] {
-            display: none !important;
-        }
-    </style>
+
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
-<div x-data="{ open: false }">
-    <button type="button" x-on:click="open = !open">Toggle</button>
-
-    <span x-show="open" x-cloak>
-        Content...
-    </span>
+<div x-data="{ message: 'hello world' }">
+    <span x-text="message"></span>
 </div>
 </body>
 </html>
