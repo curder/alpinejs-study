@@ -49,6 +49,7 @@ function sidebarGuide() {
                 {text: "x-transition", link: "/guide/x-transition"},
                 {text: "x-if", link: "/guide/x-if"},
                 {text: "x-for", link: "/guide/x-for"},
+                {text: "x-bind", link: "/guide/x-bind"},
             ]
         },
     ];

@@ -14,7 +14,7 @@
   - [`x-transition`](./guide/x-transition.md)
   - [`x-if`](./guide/x-if.md)
   - [`x-for`](./guide/x-for.md)
-  - `x-bind`
+  - [`x-bind`](./guide/x-bind.md)
   - `x-on`
   - `x-model`
   - `x-modelable`
@@ -52,3 +52,4 @@
 - [x-transition](./guide/x-transition.md)
 - [x-if](./guide/x-if.md)
 - [x-for](./guide/x-for.md)
+- [x-bind](./guide/x-bind.md)
