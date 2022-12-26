@@ -5,13 +5,13 @@
 `Alpine.js` 当前的版本是 `v3`，它包含 18 个指令、9 个属性和 3 个方法。分别是：
 
 - 指令：
-  - `x-data`
+  - [`x-data`](./guide/x-data.md)
+  - [`x-text`](./guide/x-text.md)
+  - [`x-html`](./guide/x-html.md)
   - `x-init`
   - `x-show`
   - `x-bind`
   - `x-on`
-  - `x-text`
-  - `x-html`
   - `x-model`
   - `x-modelable`
   - `x-for`
