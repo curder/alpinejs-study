@@ -1,0 +1,1 @@
+import{_ as s,c as o,o as a,a as n}from"./app.6134f378.js";const y=JSON.parse('{"title":"x-on","description":"","frontmatter":{},"headers":[],"relativePath":"guide/x-on.md","lastUpdated":1672137660000}'),e={name:"guide/x-on.md"},t=n("",7),p=[t];function l(c,r,d,i,D,F){return a(),o("div",null,p)}const u=s(e,[["render",l]]);export{y as __pageData,u as default};
