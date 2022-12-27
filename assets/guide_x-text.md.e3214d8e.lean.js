@@ -1,1 +1,0 @@
-import{_ as s,c as t,o as a,a as e}from"./app.cc636560.js";const F=JSON.parse('{"title":"x-text","description":"","frontmatter":{},"headers":[],"relativePath":"guide/x-text.md","lastUpdated":1672035058000}'),o={name:"guide/x-text.md"},n=e("",5),p=[n];function l(c,r,d,i,D,_){return a(),t("div",null,p)}const y=s(o,[["render",l]]);export{F as __pageData,y as default};
