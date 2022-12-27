@@ -2,7 +2,7 @@ import {defineConfig} from 'vitepress'
 
 export default defineConfig({
     lang: "zh-CN",
-    base: "/alpine.js-study/",
+    base: "/alpinejs-study/",
     title: "Alpine.js 学习",
     description: "Alpine.js 学习记录",
     lastUpdated: true,
@@ -17,7 +17,7 @@ export default defineConfig({
             text: '编辑它'
         },
         socialLinks: [
-            {icon: 'github', link: 'https://github.com/curder/alpine.js-study'}
+            {icon: 'github', link: 'https://github.com/curder/alpinejs-study'}
         ],
         nav: nav(),
         sidebar: {
