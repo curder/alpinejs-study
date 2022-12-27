@@ -1,7 +1,7 @@
 {
-  "name": "alpine.js-study",
+  "name": "alpinejs-study",
   "description": "Alpine.js Study",
-  "repository": "git@github.com:curder/alpine.js-study.git",
+  "repository": "git@github.com:curder/alpinejs-study.git",
   "author": "curder <q.curder@gmail.com>",
   "license": "MIT",
   "scripts": {
