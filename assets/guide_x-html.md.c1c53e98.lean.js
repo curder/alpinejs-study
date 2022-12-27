@@ -1,1 +1,0 @@
-import{_ as s,c as t,o as a,a as e}from"./app.1e4cbb53.js";const h=JSON.parse('{"title":"x-html","description":"","frontmatter":{},"headers":[],"relativePath":"guide/x-html.md","lastUpdated":1672035493000}'),o={name:"guide/x-html.md"},n=e("",6),l=[n];function p(c,r,d,i,D,_){return a(),t("div",null,l)}const F=s(o,[["render",p]]);export{h as __pageData,F as default};
