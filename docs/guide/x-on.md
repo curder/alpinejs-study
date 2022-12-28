@@ -156,6 +156,24 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 外面 outside
 
+`.outside` 是一个用于监听它所附加的元素之外的点击。
+
+下面是下拉组件示例：
+
+```html {4}
+<div x-data="{ open: false }">
+    <button @click="open = ! open">Toggle</button>
+
+    <div x-show="open" @click.outside="open = false"> // [!code focus]
+        Contents
+    </div>
+</div>
+```
+
+在上面的示例中，通过单击 `Toggle` 按钮显示下拉列表内容后，可以通过单击内容之外的页面上的任意位置来关闭下拉列表。
+
+因为 `.outside` 正在监听并非来自其注册元素的点击。
+
 ### window 对象
 
 ### 文档 document

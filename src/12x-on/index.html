@@ -28,12 +28,13 @@ const handleClick = e => {
 </script>
 
 <!--04. keyup event-->
-<input x-data type="text" @keyup.enter="alert('Keyup and enter submitted!')" />
-<input x-data type="text" @keyup.up="alert('Keyup and up submitted!')" />
+<input x-data type="text" @keyup.enter="alert('Keyup and enter submitted!')"/>
+<input x-data type="text" @keyup.up="alert('Keyup and up submitted!')"/>
 
 <!--05. custom event-->
 <div x-data @custom-event="console.log('Click dispatchEvent button was clicked!')">
-  <button @click="$event.target.dispatchEvent(new CustomEvent('custom-event', { bubbles: true }))">Click dispatchEvent</button>
+  <button @click="$event.target.dispatchEvent(new CustomEvent('custom-event', { bubbles: true }))">Click dispatchEvent
+  </button>
 </div>
 <div x-data @custom-event="console.log('Click $dispatch button was Clicked!')">
   <button @click="$dispatch('custom-event')">Click $dispatch</button>
@@ -49,6 +50,13 @@ window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
 </form>
 <div x-data @click="console.log('We will not get logged')">
   <button type="button" @click.stop>Click Me</button>
+</div>
+<div x-data="{ open: false }">
+  <button @click="open = ! open">Toggle</button>
+
+  <div x-show="open" @click.outside="open = false">
+    Contents
+  </div>
 </div>
 
 </body>
