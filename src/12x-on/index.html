@@ -11,7 +11,37 @@
 </head>
 <body>
 <!--01. x-on basic-->
-<button type="button" x-data x-on:click="alert('Hello')">Click Me</button>
+<button type="button" x-data x-on:click="console.log('Hello')">Click Me</button>
+
+<!--02. shorthand syntax-->
+<button type="button" x-data @click="console.log('Hello')">Click Me</button>
+
+<!--03. get javascript event object-->
+<button type="button" x-data @click="console.log($event.target.getAttribute('message'))" message="Hello World">Say Hi
+</button>
+
+<button x-data @click="handleClick">Click Me</button>
+<script>
+const handleClick = e => {
+  console.log(e.target)
+};
+</script>
+
+<!--04. keyup event-->
+<input x-data type="text" @keyup.enter="alert('Keyup and enter submitted!')" />
+<input x-data type="text" @keyup.up="alert('Keyup and up submitted!')" />
+
+<!--05. custom event-->
+<div x-data @custom-event="console.log('Click dispatchEvent button was clicked!')">
+  <button @click="$event.target.dispatchEvent(new CustomEvent('custom-event', { bubbles: true }))">Click dispatchEvent</button>
+</div>
+<div x-data @custom-event="console.log('Click $dispatch button was Clicked!')">
+  <button @click="$dispatch('custom-event')">Click $dispatch</button>
+</div>
+<button x-data @click="$dispatch('my-custom-event', {key: 'value'})">Click $dispatch</button>
+<script>
+window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
+</script>
 
 </body>
 </html>
