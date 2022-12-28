@@ -143,6 +143,17 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 停止 stop
 
+类似于 `.prevent` 修饰符，`.stop` 修饰符相当于在浏览器事件对象内部调用 [`.stopPropagation()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/stopPropagation) 监听器。
+
+
+```html {2}
+<div x-data @click="console.log('We will not get logged')">
+  <button type="button" @click.stop>Click Me</button> // [!code focus]
+</div>
+```
+
+在上面的示例中，单击按钮不会在控制台输出日志。是因为立即停止了事件的传播，并且不允许它"冒泡"到其 `<div>` 上的 `@click` 侦听器。
+
 ### 外面 outside
 
 ### window 对象

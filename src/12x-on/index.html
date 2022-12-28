@@ -47,6 +47,9 @@ window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
 <form x-data @submit.prevent="console.log('Form submitted')" action="/url">
   <button type="submit">Submit</button>
 </form>
+<div x-data @click="console.log('We will not get logged')">
+  <button type="button" @click.stop>Click Me</button>
+</div>
 
 </body>
 </html>
