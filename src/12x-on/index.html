@@ -43,5 +43,10 @@ const handleClick = e => {
 window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
 </script>
 
+<!--06. modifiers-->
+<form x-data @submit.prevent="console.log('Form submitted')" action="/url">
+  <button type="submit">Submit</button>
+</form>
+
 </body>
 </html>

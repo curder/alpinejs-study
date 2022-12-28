@@ -129,6 +129,18 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 阻止 prevent
 
+**`.prevent`** 相当于在浏览器事件对象的侦听器内部调用。 **`.preventDefault()`** 方法。
+
+```html
+<form x-data @submit.prevent="console.log('Form submitted')" action="/url">
+  <button type="submit">Submit</button>
+</form>
+```
+
+在上面的示例中使用修饰符 `.prevent`，单击 Submit 提交按钮后不会将表单提交到 `/url`。
+
+相反，AlpineJS 的监听器将处理它并"阻止"事件被进一步处理。
+
 ### 停止 stop
 
 ### 外面 outside
