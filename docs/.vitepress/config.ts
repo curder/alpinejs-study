@@ -80,6 +80,7 @@ function sidebarGuide() {
                         {text: "$store", link: "/guide/magics/store"},
                         {text: "$watch", link: "/guide/magics/watch"},
                         {text: "$dispatch", link: "/guide/magics/dispatch"},
+                        {text: "$nextTick", link: "/guide/magics/nextTick"},
                     ],
                 },
             ]

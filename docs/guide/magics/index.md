@@ -5,3 +5,4 @@
 - [$store](./store.md)
 - [$watch](./watch.md)
 - [$dispatch](./dispatch.md)
+- [$nextTick](./nextTick.md)

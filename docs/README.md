@@ -30,7 +30,7 @@
   - [`$store`](./guide/magics/store.md)
   - [`$watch`](./guide/magics/watch.md)
   - [`$dispatch`](./guide/magics/dispatch.md)
-  - `$nextTick`
+  - [`$nextTick`](./guide/magics/nextTick.md)
   - `$root`
   - `$data`
   - `$id`
