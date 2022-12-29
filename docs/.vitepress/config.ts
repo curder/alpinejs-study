@@ -82,6 +82,7 @@ function sidebarGuide() {
                         {text: "$dispatch", link: "/guide/magics/dispatch"},
                         {text: "$nextTick", link: "/guide/magics/nextTick"},
                         {text: "$root", link: "/guide/magics/root"},
+                        {text: "$data", link: "/guide/magics/data"},
                     ],
                 },
             ]

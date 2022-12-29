@@ -7,3 +7,4 @@
 - [$dispatch](./dispatch.md)
 - [$nextTick](./nextTick.md)
 - [$root](./root.md)
+- [$data](./data.md)

@@ -32,7 +32,7 @@
   - [`$dispatch`](./guide/magics/dispatch.md)
   - [`$nextTick`](./guide/magics/nextTick.md)
   - [`$root`](./guide/magics/root.md)
-  - `$data`
+  - [`$data`](./guide/magics/data.md)
   - `$id`
 
 - 方法
