@@ -4,3 +4,4 @@
 - [Modal](modal.md)
 - [Tabs](tabs.md)
 - [Carousel](carousel.md)
+- [Accordion](accordion.md)

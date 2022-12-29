@@ -121,6 +121,7 @@ function sidebarComponents() {
                 {text: 'Modal', link: "/guide/components/modal"},
                 {text: "Tabs", link: "/guide/components/tabs"},
                 {text: "Carousel", link: "/guide/components/carousel"},
+                {text: "Accordion", link: "/guide/components/accordion"},
             ]
         },
     ];
