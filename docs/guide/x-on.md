@@ -299,6 +299,20 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 点 dot
 
+与 `.camel` 驼峰修饰符类似，在某些情况下，可能想要监听名称中带有点的事件（如 `custom.event`）。
+
+由于事件名称中的点是 Alpine 中保留的字符，因此需要用破折号书写它们并添加 `.dot` 修饰符。
+
+```html
+<button x-data
+      @custom-event.dot="console.log('handle custom event', $event.detail)"
+      @click="$dispatch('custom.event', {key: 'value'})">
+  Click Me
+</button>
+```
+
+在上面的代码示例 `@custom-event.dot` 中将对应事件名称 `custom.event`。
+
 ### 被动 passive
 
 [阅读更多关于被动倾听者的信息](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener#%E4%BD%BF%E7%94%A8_passive_%E6%94%B9%E5%96%84%E6%BB%9A%E5%B1%8F%E6%80%A7%E8%83%BD)

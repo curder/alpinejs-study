@@ -112,5 +112,13 @@ window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
   </button>
 </div>
 
+<div>
+  <button x-data
+          @custom-event.dot="console.log('handle custom event', $event.detail)"
+          @click="$dispatch('custom.event', {key: 'value'})">
+    Click Me
+  </button>
+</div>
+
 </body>
 </html>
