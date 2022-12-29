@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as l}from"./app.dbe68515.js";const C=JSON.parse('{"title":"$data","description":"","frontmatter":{},"headers":[],"relativePath":"guide/magics/data.md","lastUpdated":1672313866000}'),o={name:"guide/magics/data.md"},p=l("",4),t=[p];function e(c,r,D,F,y,i){return n(),a("div",null,t)}const A=s(o,[["render",e]]);export{C as __pageData,A as default};
