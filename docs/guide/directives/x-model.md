@@ -12,7 +12,7 @@
 </div>
 ```
 
-当用户在输入框中输入内容时，将绑定到 `message` 上，同时使用 [`x-text`指令](./x-text.md) 将输入的内容渲染到 `<span>` 标签内。
+当用户在输入框中输入内容时，将绑定到 `message` 上，同时使用 [`x-text`指令](x-text.md) 将输入的内容渲染到 `<span>` 标签内。
 
 `x-model` 是双向绑定的，意味着它既"设置"又"获取"。
 
@@ -188,7 +188,7 @@
 
 ### .debounce
 
-类似于 [`x-on.debounce`](./x-on.md#去抖动-debounce) ，允许通过添加 `.debounce` 修饰符到 `x-model` 指令，可以轻松地消除绑定输入的更新。
+类似于 [`x-on.debounce`](x-on.md#去抖动-debounce) ，允许通过添加 `.debounce` 修饰符到 `x-model` 指令，可以轻松地消除绑定输入的更新。
 
 这对于实时搜索输入之类的情况很有用，比如当每次搜索属性发生变化时，都会从服务器获取新数据。
 
@@ -210,7 +210,7 @@
 
 ## `.throttle`
 
-类似于 [`x-on.throttle`](./x-on.md#限流-throttle) 可以将触发的属性更新限制为仅在指定的时间间隔内更新。
+类似于 [`x-on.throttle`](x-on.md#限流-throttle) 可以将触发的属性更新限制为仅在指定的时间间隔内更新。
 
 默认节流间隔为 250 毫秒，可以通过添加时间修改器来轻松自定义它。
 
@@ -243,6 +243,6 @@ Alpine 公开了用于 `x-model` 的获取和设置，这对于可能想要覆�
 </div>
 ```
 
-通过 [`x-ref`](./x-ref.md) 指令引用DOM，允许通过 `$ref` 直接访问 `x-ref` 指令定义的 DOM 元素名称。
+通过 [`x-ref`](x-ref.md) 指令引用DOM，允许通过 `$ref` 直接访问 `x-ref` 指令定义的 DOM 元素名称。
 
 `$refs.div` 引用通过 `x-ref="div"` DOM 元素。

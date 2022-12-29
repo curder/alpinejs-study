@@ -13,12 +13,12 @@
 ```
 
 ::: info x-cloak
-如果页面加载的默认状态 `x-show` 表达式的值为 `false`，可能希望在页面上使用 [`x-cloak`](./x-cloak.md) 来避免页面闪烁。
+如果页面加载的默认状态 `x-show` 表达式的值为 `false`，可能希望在页面上使用 [`x-cloak`](x-cloak.md) 来避免页面闪烁。
 :::
 
 ## 过渡效果
 
-如果要对 `x-show` 行为应用平滑过渡，可以将它与 [`x-transition`](./x-transition.md) 结合使用。例如：
+如果要对 `x-show` 行为应用平滑过渡，可以将它与 [`x-transition`](x-transition.md) 结合使用。例如：
 
 ```html {4}
 <div x-data="{ open: false }">
