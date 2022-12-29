@@ -9,7 +9,7 @@ export default defineConfig({
     head: [
         [
             'link',
-            { rel: 'icon', href: '/images/favicon.ico', crossorigin: '' }
+            { rel: 'icon', href: '/alpinejs-study/images/favicon.ico' }
         ]
     ],
     themeConfig: {
