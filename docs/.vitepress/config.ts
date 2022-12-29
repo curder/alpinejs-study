@@ -77,6 +77,7 @@ function sidebarGuide() {
                     items: [
                         {text: '$el', link: "/guide/magics/el"},
                         {text: "$refs", link: "/guide/magics/refs"},
+                        {text: "$store", link: "/guide/magics/store"},
                     ],
                 },
 

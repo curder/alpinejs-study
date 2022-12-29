@@ -27,7 +27,7 @@
 - [魔法属性](./guide/magics/index.md)
   - [`$el`](./guide/magics/el.md)
   - [`$refs`](./guide/magics/refs.md)
-  - `$store`
+  - [`$store`](./guide/magics/store.md)
   - `$watch`
   - `$dispatch`
   - `$nextTick`
