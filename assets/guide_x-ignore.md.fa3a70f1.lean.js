@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as n,a as o}from"./app.8524b29a.js";const _=JSON.parse('{"title":"x-ignore","description":"","frontmatter":{},"headers":[],"relativePath":"guide/x-ignore.md","lastUpdated":1672296567000}'),l={name:"guide/x-ignore.md"},e=o("",5),p=[e];function t(c,r,D,F,i,d){return n(),a("div",null,p)}const g=s(l,[["render",t]]);export{_ as __pageData,g as default};
