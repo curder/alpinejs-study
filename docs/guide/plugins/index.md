@@ -1,3 +1,4 @@
 # 插件
 
-- [mask](./mask.md)
+- [Mask](./mask.md)
+- [Intersect](./intersect.md)

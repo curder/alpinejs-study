@@ -138,6 +138,7 @@ function sidebarPlugins()
             // collapsed: false,
             items: [
                 {text: 'Mask', link: "/guide/plugins/mask"},
+                {text: 'Intersect', link: "/guide/plugins/intersect"},
             ]
         }
     ];
