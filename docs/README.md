@@ -29,7 +29,7 @@
   - [`$refs`](./guide/magics/refs.md)
   - [`$store`](./guide/magics/store.md)
   - [`$watch`](./guide/magics/watch.md)
-  - `$dispatch`
+  - [`$dispatch`](./guide/magics/dispatch.md)
   - `$nextTick`
   - `$root`
   - `$data`
