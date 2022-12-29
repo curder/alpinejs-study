@@ -120,6 +120,7 @@ function sideGlobals() {
             items: [
                 {text: "Alpine.data()", link: "/guide/globals/alpine-data"},
                 {text: "Alpine.store()", link: "/guide/globals/alpine-store"},
+                {text: "Alpine.bind()", link: "/guide/globals/alpine-bind"},
             ],
         }
     ];
