@@ -17,4 +17,4 @@
 - [x-ref](x-ref.md)
 - [x-teleport](x-teleport.md)
 - [x-modelable](x-modelable.md)
-- [x-id](/x-id.md)
+- [x-id](x-id.md)
