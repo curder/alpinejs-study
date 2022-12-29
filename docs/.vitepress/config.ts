@@ -118,7 +118,7 @@ function sideGlobals() {
             // collapsible: true,
             // collapsed: false,
             items: [
-                {text: "Alpine.data()", link: "/guide/globals/data"},
+                {text: "Alpine.data()", link: "/guide/globals/alpine-data"},
                 {text: "Alpine.store()", link: "/guide/globals/alpine-store"},
             ],
         }
