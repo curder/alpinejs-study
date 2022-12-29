@@ -281,6 +281,22 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 驼峰 camel
 
+有时可能想要监听驼峰式事件，例如 `customEvent` 。由于 HTML 属性内部不支持，因此 Alpine 需要在内部添加修饰符 `.camel` 的驼峰式大小写对事件名称进行驼峰式大小写。
+
+通过 `.camel` 在上面的示例中添加，AlpineJS 现在正在监听 `customEvent` 而不是 `custom-event`。
+
+```html {3-4}
+
+<button x-data
+        @custom-event.camel="console.log('handle custom event')" // [!code focus]
+        @click="$dispatch('customEvent', {key: 'value'})"> // [!code focus]
+  Click Me
+</button>
+```
+> 使用 `$dispatch('customEvent')` 触发事件
+> 
+> 使用 `@custom-event.camel` 监听 `customEvent` 事件，因为 `.camel` 监听的事件会转化为驼峰写法
+
 ### 点 dot
 
 ### 被动 passive

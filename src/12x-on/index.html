@@ -104,5 +104,13 @@ window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
   </button>
 </div>
 
+<div>
+  <button x-data
+          @custom-event.camel="console.log('handle custom event')"
+          @click="$dispatch('customEvent', {key: 'value'})">
+    Click Me
+  </button>
+</div>
+
 </body>
 </html>
