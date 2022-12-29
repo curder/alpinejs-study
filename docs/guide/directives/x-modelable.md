@@ -1,6 +1,6 @@
 # x-modelable
 
-`x-modelable` 允许将任何 Alpine 属性公开为 [`x-model`](/x-model.md) 指令的目标。
+`x-modelable` 允许将任何 Alpine 属性公开为 [`x-model`](x-model.md) 指令的目标。
 
 ```html
 <div x-data="{ number: 5 }">

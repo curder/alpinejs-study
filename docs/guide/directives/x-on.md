@@ -188,7 +188,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### window 对象
 
-[`x-on`](/x-on.md) 可以添加 `.window` 修饰符，Alpine 将在页面的根对象 `window` 上注册事件监听器而不是元素本身。
+[`x-on`](x-on.md) 可以添加 `.window` 修饰符，Alpine 将在页面的根对象 `window` 上注册事件监听器而不是元素本身。
 
 ```html
 
@@ -199,7 +199,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 文档 document
 
-`.document` 工作方式类似于 [`.window`](/x-on.md#window-对象) 仅在 `document` 全局而不是全局上注册侦听器 `window`。
+`.document` 工作方式类似于 [`.window`](x-on.md#window-对象) 仅在 `document` 全局而不是全局上注册侦听器 `window`。
 
 ```html
 
@@ -248,11 +248,11 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 <div x-data @scroll.window.throttle="console.log('window scroll throttle')"></div>
 ```
 
-如果没有 [`.throttle`](/x-on.md#限流-throttle)，该 `console.log('window scroll throttle')` 方法将在用户向下滚动页面时被触发数百次，这会减慢网站的速度。
+如果没有 [`.throttle`](x-on.md#限流-throttle)，该 `console.log('window scroll throttle')` 方法将在用户向下滚动页面时被触发数百次，这会减慢网站的速度。
 
-而通过添加 [`.throttle`](/x-on.md#限流-throttle) 修饰符后确保 `console.log('window scroll throttle')` 仅每 250 毫秒调用一次。
+而通过添加 [`.throttle`](x-on.md#限流-throttle) 修饰符后确保 `console.log('window scroll throttle')` 仅每 250 毫秒调用一次。
 
-就像 [`.debounce`](/x-on.md#去抖动-debounce) 一样，可以为节流事件添加自定义持续时间：
+就像 [`.debounce`](x-on.md#去抖动-debounce) 一样，可以为节流事件添加自定义持续时间：
 
 ```html
 
@@ -274,7 +274,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 </button>
 ```
 
-在上面的示例中，在 `<button>` 标签内有一个 `<img>` 标签。通常任何源自 `<button>` 元素内的点击（例如`<img>`）都会被 [`@click`](/x-on.md)
+在上面的示例中，在 `<button>` 标签内有一个 `<img>` 标签。通常任何源自 `<button>` 元素内的点击（例如`<img>`）都会被 [`@click`](x-on.md)
 按钮上的侦听器接收到。
 
 但是在这种情况下，因为添加了一个 `.self`，所以只有单击按钮本身才会调用 click 表达式。而源自 `<img>` 元素的点击不会被处理。

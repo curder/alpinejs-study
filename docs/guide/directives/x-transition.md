@@ -4,7 +4,7 @@ Alpine 通过 `x-transition` 指令提供了一个可以在元素显示或隐藏
 
 ## 过渡助手
 
-使用 Alpine 实现过渡的最简单方法是在 [`x-show`](/x-show.md) 元素上添加 `x-transition` 。例如：
+使用 Alpine 实现过渡的最简单方法是在 [`x-show`](x-show.md) 元素上添加 `x-transition` 。例如：
 
 ```html {4}
 
