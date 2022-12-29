@@ -186,6 +186,12 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 文档 document
 
+`.document` 工作方式类似于 `.window` 仅在 `document` 全局而不是全局上注册侦听器 `window`。
+
+```html
+<button x-data @keyup.escape.document="console.log('escape document alarm')">Click Me</button>
+```
+
 ### 去抖动 debounce
 
 ### 限流 throttle
