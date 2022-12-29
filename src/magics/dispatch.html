@@ -2,14 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <title>Document</title>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+<div x-data @notify="console.log('Hello World!')">
+  <button @click="$dispatch('notify')">
+    Notify
+  </button>
+</div>
+
+<!--pass custom object-->
+<div x-data @notify="console.log($event.detail.message)">
+  <button @click="$dispatch('notify', { message: 'Hello World!' })">
+    Notify
+  </button>
+</div>
+
+<!-- 🚫 Won't work -->
+<div x-data>
+  <span @notify="console.log('Without .window')"></span>
+  <button @click="$dispatch('notify')">Notify</button>
+</div>
+
+<!-- ✅ Will work (because of .window) -->
+<div x-data>
+  <span @notify.window="console.log('With .window')"></span>
+  <button @click="$dispatch('notify')">Notify</button>
+</div>
+
+<div
+  x-data="{ slogan: 'Hello' }"
+  @set-custom-slogan.window="slogan = $event.detail.slogan"
+>
+  <h1 x-text="slogan"></h1>
+</div>
+<div x-data>
+  <button @click="$dispatch('set-custom-slogan', { slogan: 'Hello World!' })">Click me</button>
+</div>
+
+<div x-data="{ title: 'Hello' }">
+    <span x-model="title">
+      <h1 x-text="title"></h1>
+        <button @click="$dispatch('input', 'Hello World!')">Click me</button>
+      <!-- After the button is pressed, `x-model` will catch the bubbling "input" event, and update title. -->
+    </span>
+</div>
 
 </body>
 </html>
