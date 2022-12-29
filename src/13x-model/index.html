@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Document</title>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+<!--01. x-model-->
+<div x-data="{ message: '' }">
+  <input type="text" x-model="message"/>
+
+  <span x-text="message"></span>
+</div>
+
+<div x-data="{ message: '' }">
+  <button @click="message = 'changed'">Change Message</button>
+  <input type="text" x-model="message"/>
+
+  <span x-text="message"></span>
+</div>
+
+<div x-data="{ message: '' }">
+  <select x-model="message">
+    <option value=""></option>
+    <option value="hi">Hi</option>
+    <option value="hey">Hey</option>
+  </select>
+  <span x-text="message"></span>
+</div>
+
+<div x-data="{ answer: '' }">
+  <input type="radio" value="yes" x-model="answer">
+  <input type="radio" value="no" x-model="answer">
+
+  Answer: <span x-text="answer"></span>
+</div>
+
+<div x-data="{ color: ''}">
+  <select x-model="color" multiple>
+    <template x-for="color in ['Red', 'Orange', 'Yellow']">
+      <option x-text="color"></option>
+    </template>
+  </select>
+
+  Color: <span x-text="color"></span>
+</div>
+
+<!--02 .lazy-->
+<div x-data="{ username: ''}">
+  <input type="text" x-model.lazy="username">
+  <span x-show="username.length > 2">The username is too long.</span>
+</div>
+
+<!--03 .number-->
+<div x-data="{ age: null }">
+  <input type="text" x-model.number="age">
+  <span x-text="typeof age"></span>
+</div>
+
+<!--04. debounce-->
+<div x-data="{ search: '' }">
+  <input type="text" x-model.debounce.1500ms="search" />
+  <span x-text="search"></span>
+</div>
+
+<!--05 .throttle-->
+<div x-data="{ search: '' }">
+  <input type="text" x-model.throttle.1500ms="search">
+
+  <span x-text="search"></span>
+</div>
+
+<!--06. x-model get and set-->
+<div x-data="{ username: 'Curder' }">
+  <div x-ref="div" x-model="username"></div>
+
+  <button @click="$refs.div._x_model.set('Customer Username')">Change username</button>
+
+  <span x-text="$refs.div._x_model.get()"></span>
+</div>
+</body>
+</html>
