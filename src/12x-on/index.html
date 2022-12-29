@@ -120,5 +120,9 @@ window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
   </button>
 </div>
 
+<div>
+  <div x-data @mouseup.passive="console.log('mouseup passive')">mouseup passive</div>
+</div>
+
 </body>
 </html>

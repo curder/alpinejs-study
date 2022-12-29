@@ -315,5 +315,13 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 被动 passive
 
+浏览器优化了页面滚动，即使在页面上执行 JavaScript 时也能快速流畅地滚动。但是不正确实施的触摸和滚轮侦听器可能会阻止此优化并导致站点性能不佳。
+
+例如正在监听鼠标事件，添加 `.passive` 到监听器中，以免影响性能。
+
+```html
+<div x-data @mouseup.passive="console.log('mouseup passive')">mouseup passive</div>
+```
+
 [阅读更多关于被动倾听者的信息](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener#%E4%BD%BF%E7%94%A8_passive_%E6%94%B9%E5%96%84%E6%BB%9A%E5%B1%8F%E6%80%A7%E8%83%BD)
 
