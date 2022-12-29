@@ -31,7 +31,7 @@
 
 这也同样适用于 `Alpine.data()` 语法注册组件的情况。
 
-```html
+```javascript
 Alpine.data('dropdown', () => ({
     init() {
         console.log('I am initialized.')
