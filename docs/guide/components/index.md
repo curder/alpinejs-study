@@ -5,3 +5,4 @@
 - [Tabs](tabs.md)
 - [Carousel](carousel.md)
 - [Accordion](accordion.md)
+- [Notification](notification.md)

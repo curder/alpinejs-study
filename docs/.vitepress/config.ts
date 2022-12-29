@@ -122,6 +122,7 @@ function sidebarComponents() {
                 {text: "Tabs", link: "/guide/components/tabs"},
                 {text: "Carousel", link: "/guide/components/carousel"},
                 {text: "Accordion", link: "/guide/components/accordion"},
+                {text: "Notification", link: "/guide/components/notification"},
             ]
         },
     ];
