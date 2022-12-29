@@ -39,7 +39,7 @@ export default defineConfig({
 
 function nav() {
     return [
-        {text: '安装', link: '/guide/install', activeMatch: '/introduction/'},
+        {text: '安装', link: '/guide/install', activeMatch: '/guide/install'},
         {text: '指令', link: "/guide/directives/index", activeMatch: "/guide/directives/"},
         {text: "魔术属性", link: "/guide/magics/index", activeMatch: "/guide/magics/"},
         {text: '组件', link: '/guide/components/index', activeMatch: '/guide/components/'},
