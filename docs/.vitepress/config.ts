@@ -62,6 +62,7 @@ function sidebarGuide() {
                 {text: "x-effect", link: "/guide/x-effect"},
                 {text: 'x-ignore', link: "/guide/x-ignore"},
                 {text: 'x-ref', link: "/guide/x-ref"},
+                {text: 'x-teleport', link: "/guide/x-teleport"},
             ]
         },
     ];

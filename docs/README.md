@@ -20,8 +20,8 @@
   - [`x-effect`](./guide/x-effect.md)
   - [`x-ignore`](./guide/x-ignore.md)
   - [`x-ref`](./guide/x-ref.md)
+  - [`x-teleport`](./guide/x-teleport.md)
   - `x-modelable`
-  - `x-teleport`
   - `x-id`
 
 - 属性
@@ -58,3 +58,4 @@
 - [x-effect](./guide/x-effect.md)
 - [x-ignore](./guide/x-ignore.md)
 - [x-ref](./guide/x-ref.md)
+- [x-teleport](./guide/x-teleport.md)

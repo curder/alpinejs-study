@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Document</title>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+<div x-data="{ open: false }">
+  <button @click="open = ! open">Toggle Modal</button>
+
+  <template x-teleport="body">
+    <div x-show="open">
+      Modal contents...
+    </div>
+  </template>
+</div>
+<div>Some other content...</div>
+
+<div x-data="{ open: false }">
+  <button @click="open = ! open">Toggle Modal</button>
+
+  <template x-teleport="body" @click="open = false">
+    <div x-show="open">
+      Modal contents...
+      (click to close)
+    </div>
+  </template>
+</div>
+
+<div x-data="{ open: false }">
+  <button @click="open = ! open">Toggle Modal</button>
+
+  <template x-teleport="body">
+    <div x-show="open">
+      Modal contents...
+
+      <div x-data="{ open: false }">
+        <button @click="open = ! open">Toggle Nested Modal</button>
+
+        <template x-teleport="body">
+          <div x-show="open">
+            Nested modal contents...
+          </div>
+        </template>
+      </div>
+    </div>
+  </template>
+</div>
+
+</body>
+</html>
