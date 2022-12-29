@@ -32,6 +32,7 @@ export default defineConfig({
             "/guide/directives": sidebarDirectives(),
             "/guide/magics": sidebarMagics(),
             '/guide/components': sidebarComponents(),
+            "guide/plugins": sidebarPlugins(),
         }
     }
 });
@@ -42,6 +43,7 @@ function nav() {
         {text: '指令', link: "/guide/directives/index", activeMatch: "/guide/directives/"},
         {text: "魔术属性", link: "/guide/magics/index", activeMatch: "/guide/magics/"},
         {text: '组件', link: '/guide/components/index', activeMatch: '/guide/components/'},
+        {text: "插件", link: "/guide/plugins/index", activeMatch: "/guide/plugins/"},
     ];
 }
 
@@ -49,8 +51,8 @@ function sidebarInstall() {
     return [
         {
             text: "安装",
-            collapsible: false,
-            collapsed: false,
+            // collapsible: true,
+            // collapsed: false,
             items: [
                 {text: "安装", link: "/guide/install"},
             ]
@@ -115,8 +117,22 @@ function sidebarComponents() {
             // collapsible: true,
             // collapsed: false,
             items: [
-                {text: 'Dropdown', link: "/components/dropdown"},
+                {text: 'Dropdown', link: "/guide/components/dropdown"},
             ]
         },
+    ];
+}
+
+function sidebarPlugins()
+{
+    return [
+        {
+            text: "插件",
+            // collapsible: true,
+            // collapsed: false,
+            items: [
+                {text: 'Mask', link: "/guide/plugins/mask"},
+            ]
+        }
     ];
 }
