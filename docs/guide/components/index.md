@@ -1,3 +1,3 @@
 # 组件
 
-- [Dropdown](./dropdown.md)
+- [Dropdown](dropdown.md)

@@ -84,5 +84,5 @@ Alpine.start()
 </html>
 ```
 
-- 使用 [`x-data`](./directives/x-data.md) 指令定义一个新的组件作用域。
-- 使用 [`x-text`](./directives/x-text.md) 指令更新的是元素的 `innerText`。
+- 使用 [`x-data`](directives/x-data.md) 指令定义一个新的组件作用域。
+- 使用 [`x-text`](directives/x-text.md) 指令更新的是元素的 `innerText`。
