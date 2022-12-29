@@ -139,6 +139,7 @@ function sidebarPlugins()
             items: [
                 {text: 'Mask', link: "/guide/plugins/mask"},
                 {text: 'Intersect', link: "/guide/plugins/intersect"},
+                {text: "Persist", link: "/guide/plugins/persist"},
             ]
         }
     ];
