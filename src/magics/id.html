@@ -2,14 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <title>Document</title>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+<!--basic-->
+<input type="text" x-bind:id="$id('input')" x-data=""/>
+<input :id="$id('input')" type="text" x-data=""/>
 
+<!--group-->
+<label :for="id" x-data="{ id: $id('input') }">One: <input :id="id" type="text"></label>
+<label :for="id" x-data="{ id: $id('input') }">Two: <input :id="id" type="text"></label>
+
+<!--nesting-->
+<div x-data x-id="['text-input']">
+  <label :for="$id('text-input')">
+    <input :id="$id('text-input')" type="text">
+  </label>
+
+  <div x-id="['text-input']">
+    <label :for="$id('text-input')">
+      <input :id="$id('text-input')" type="text">
+    </label>
+  </div>
+</div>
+
+<!--loop-->
+<ul
+  x-data="{items: [{id: 1}, {id: 2}, {id: 3}]}"
+  x-id="['list-item']"
+>
+  <template :key="item.id" x-for="item in items">
+    <li :id="$id('list-item', item.id)">...</li>
+  </template>
+</ul>
 </body>
 </html>
