@@ -60,6 +60,7 @@ function sidebarGuide() {
                 {text: "x-on", link: "/guide/x-on"},
                 {text: "x-model", link: "/guide/x-model"},
                 {text: "x-effect", link: "/guide/x-effect"},
+                {text: 'x-ignore', link: "/guide/x-ignore"},
             ]
         },
     ];
