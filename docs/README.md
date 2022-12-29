@@ -19,8 +19,8 @@
   - [`x-model`](./guide/x-model.md)
   - [`x-effect`](./guide/x-effect.md)
   - [`x-ignore`](./guide/x-ignore.md)
+  - [`x-ref`](./guide/x-ref.md)
   - `x-modelable`
-  - `x-ref`
   - `x-teleport`
   - `x-id`
 
@@ -57,3 +57,4 @@
 - [x-model](./guide/x-model.md)
 - [x-effect](./guide/x-effect.md)
 - [x-ignore](./guide/x-ignore.md)
+- [x-ref](./guide/x-ref.md)

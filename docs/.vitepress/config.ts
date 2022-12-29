@@ -61,6 +61,7 @@ function sidebarGuide() {
                 {text: "x-model", link: "/guide/x-model"},
                 {text: "x-effect", link: "/guide/x-effect"},
                 {text: 'x-ignore', link: "/guide/x-ignore"},
+                {text: 'x-ref', link: "/guide/x-ref"},
             ]
         },
     ];
