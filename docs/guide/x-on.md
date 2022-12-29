@@ -202,6 +202,25 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 去抖动 debounce
 
+有时“去抖动”监听器事件对处理程序很有用，这样它只会在一段时间不活动（默认为 250 毫秒）后才被调用。
+
+例如，如果有一个搜索字段在用户输入时触发网络请求，添加去抖动将防止网络请求在每次击键时触发。
+
+```html
+<input x-data @input.debounce="fetch(`/some-uri/${$event.target.value}`)" />
+```
+现在，不是在每次击键后调用 `fetch()`，而是只会在 250 毫秒没有击键后调用 `fetch()`。
+
+> 通过 `$event.target.value` 获取当前输入框的值。
+
+如果想延长或缩短去抖动时间，你可以通过在 `.debounce` 修饰符后面指定一个持续时间来实现，如下所示：
+
+```html
+<input x-data @input.debounce.1500ms="fetch(`/some-uri/${$event.target.value}`)" />
+```
+
+现在 `fetch()` 只会在 500 毫秒不活动后调用。
+
 ### 限流 throttle
 
 ### 自身 self

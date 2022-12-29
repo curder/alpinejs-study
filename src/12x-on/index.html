@@ -64,5 +64,8 @@ window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
 
 <button x-data @click.once="console.log('I will only log once')">Click Me</button>
 
+<input x-data @input.debounce="fetch(`/some-uri/${$event.target.value}`)" />
+<input x-data @input.debounce.1500ms="fetch(`/some-uri/${$event.target.value}`)" />
+
 </body>
 </html>
