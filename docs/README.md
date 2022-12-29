@@ -22,7 +22,7 @@
   - [`x-ref`](./guide/x-ref.md)
   - [`x-teleport`](./guide/x-teleport.md)
   - [`x-modelable`](./guide/x-modelable.md)
-  - `x-id`
+  - [`x-id`](./guide/x-id.md)
 
 - 属性
   - `$el`
@@ -60,3 +60,4 @@
 - [x-ref](./guide/x-ref.md)
 - [x-teleport](./guide/x-teleport.md)
 - [x-modelable](./guide/x-modelable.md)
+- [x-id](./guide/x-id.md)
