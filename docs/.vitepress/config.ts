@@ -120,6 +120,7 @@ function sidebarComponents() {
                 {text: 'Dropdown', link: "/guide/components/dropdown"},
                 {text: 'Modal', link: "/guide/components/modal"},
                 {text: "Tabs", link: "/guide/components/tabs"},
+                {text: "Carousel", link: "/guide/components/carousel"},
             ]
         },
     ];
