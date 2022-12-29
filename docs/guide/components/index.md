@@ -6,3 +6,4 @@
 - [Carousel](carousel.md)
 - [Accordion](accordion.md)
 - [Notification](notification.md)
+- [Popover](popover.md)
