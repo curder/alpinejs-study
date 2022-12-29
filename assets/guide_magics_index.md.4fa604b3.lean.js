@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t,a as r}from"./app.caa9afc9.js";const p=JSON.parse('{"title":"所有魔法属性","description":"","frontmatter":{},"headers":[],"relativePath":"guide/magics/index.md","lastUpdated":1672308300000}'),i={name:"guide/magics/index.md"},s=r("",2),_=[s];function l(c,o,d,n,h,f){return t(),a("div",null,_)}const u=e(i,[["render",l]]);export{p as __pageData,u as default};

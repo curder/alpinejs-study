@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as l}from"./app.caa9afc9.js";const u=JSON.parse('{"title":"$refs","description":"","frontmatter":{},"headers":[],"relativePath":"guide/magics/refs.md","lastUpdated":1672304815000}'),o={name:"guide/magics/refs.md"},p=l("",7),t=[p];function e(c,r,D,F,y,i){return n(),a("div",null,t)}const C=s(o,[["render",e]]);export{u as __pageData,C as default};
