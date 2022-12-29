@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as l,a as n}from"./app.39015b26.js";const _=JSON.parse('{"title":"$el","description":"","frontmatter":{},"headers":[],"relativePath":"guide/magics/el.md","lastUpdated":1672302692000}'),e={name:"guide/magics/el.md"},o=n("",4),t=[o];function p(c,r,i,D,d,F){return l(),a("div",null,t)}const u=s(e,[["render",p]]);export{_ as __pageData,u as default};
