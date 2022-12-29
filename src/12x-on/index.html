@@ -62,6 +62,7 @@ window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
 
 <button x-data @keyup.escape.document="console.log('escape document alarm')">Click Me</button>
 
+<button x-data @click.once="console.log('I will only log once')">Click Me</button>
 
 </body>
 </html>

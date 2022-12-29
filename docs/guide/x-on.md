@@ -192,6 +192,14 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 <button x-data @keyup.escape.document="console.log('escape document alarm')">Click Me</button>
 ```
 
+### 仅运行一次 once
+
+通过添加 `.once` 侦听器，可以确保处理程序仅被调用一次。
+
+```html
+<button x-data @click.once="console.log('I will only log once')">Click Me</button>
+```
+
 ### 去抖动 debounce
 
 ### 限流 throttle
