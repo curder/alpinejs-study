@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Document</title>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+<div x-data>
+  <button type="button" @click="$refs.text?.remove()">Remove Text</button>
+
+  <span x-ref="text">Hello Alpine.js</span>
+</div>
+
+<div x-data>
+  <button type="button" @click="$refs.text.innerHTML = `Hello World!`">Change</button>
+
+  <span x-ref="text">Hello Alpine.js</span>
+</div>
+
+</body>
+</html>

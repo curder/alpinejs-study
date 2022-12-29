@@ -1,11 +1,13 @@
-# x-ref
+# $refs
 
-`x-ref` 指令常常搭配 [`$refs`](../magics/refs.md) 一起使用，用于直接访问 DOM 元素。
+`$refs` 是一个用来在组件中获取原生 DOM 元素的魔法属性。
 
-它最适合作为 `getElementById()` 和 `querySelector()` 之类的 API 的替代。
+可以在需要时手动获取到原始的 DOM 元素。
 
+它通常用作 `querySelector()` 的替代方案。
 
 ::: code-group
+
 ```html [remove()]
 <div x-data>
   <button type="button" @click="$refs.text?.remove()">Remove Text</button>
@@ -22,3 +24,7 @@
 </div>
 ```
 :::
+
+当按下 `<button>` 时，`<span>` 标签将被删除。
+
+`$refs.text` 会引用 [`x-ref="text"`](../directives/x-ref.md) 指令定义的 DOM 元素。
