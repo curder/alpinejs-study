@@ -142,6 +142,7 @@ function sidebarPlugins()
                 {text: "Persist", link: "/guide/plugins/persist"},
                 {text: "Focus", link: "/guide/plugins/focus"},
                 {text: "Collapse", link: "/guide/plugins/collapse"},
+                {text: "Morph", link: "/guide/plugins/morph"},
             ]
         }
     ];

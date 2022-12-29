@@ -5,3 +5,4 @@
 - [Persist](persist.md)
 - [Focus](focus.md)
 - [Collapse](collapse.md)
+- [Morph](morph.md)
