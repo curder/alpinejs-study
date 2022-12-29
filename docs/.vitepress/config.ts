@@ -31,6 +31,7 @@ export default defineConfig({
             "": sidebarInstall(),
             "/guide/directives": sidebarDirectives(),
             "/guide/magics": sidebarMagics(),
+            "/guide/globals": sideGlobals(),
             '/guide/components': sidebarComponents(),
             "guide/plugins": sidebarPlugins(),
         }
@@ -42,6 +43,7 @@ function nav() {
         {text: '安装', link: '/guide/install', activeMatch: '/guide/install'},
         {text: '指令', link: "/guide/directives/index", activeMatch: "/guide/directives/"},
         {text: "魔术属性", link: "/guide/magics/index", activeMatch: "/guide/magics/"},
+        {text: "全局变量", link: "/guide/globals/index", activeMatch: "/guide/globals/"},
         {text: '组件', link: '/guide/components/index', activeMatch: '/guide/components/'},
         {text: "插件", link: "/guide/plugins/index", activeMatch: "/guide/plugins/"},
     ];
@@ -89,8 +91,7 @@ function sidebarDirectives() {
     ];
 }
 
-function sidebarMagics()
-{
+function sidebarMagics() {
     return [
         {
             text: "魔法属性",
@@ -107,6 +108,19 @@ function sidebarMagics()
                 {text: "$id", link: "/guide/magics/id"},
             ],
         },
+    ];
+}
+
+function sideGlobals() {
+    return [
+        {
+            text: "全局变量",
+            // collapsible: true,
+            // collapsed: false,
+            items: [
+                {text: "Alpine.data()", link: "/guide/globals/data"},
+            ],
+        }
     ];
 }
 
@@ -129,8 +143,7 @@ function sidebarComponents() {
     ];
 }
 
-function sidebarPlugins()
-{
+function sidebarPlugins() {
     return [
         {
             text: "插件",
