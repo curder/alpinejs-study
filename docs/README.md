@@ -17,8 +17,8 @@
   - [`x-bind`](./guide/x-bind.md)
   - [`x-on`](./guide/x-on.md)
   - [`x-model`](./guide/x-model.md)
+  - [`x-effect`](./guide/x-effect.md)
   - `x-modelable`
-  - `x-effect`
   - `x-ignore`
   - `x-ref`
   - `x-teleport`
@@ -55,3 +55,4 @@
 - [x-bind](./guide/x-bind.md)
 - [x-on](./guide/x-on.md)
 - [x-model](./guide/x-model.md)
+- [x-effect](./guide/x-effect.md)

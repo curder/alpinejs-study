@@ -59,6 +59,7 @@ function sidebarGuide() {
                 {text: "x-bind", link: "/guide/x-bind"},
                 {text: "x-on", link: "/guide/x-on"},
                 {text: "x-model", link: "/guide/x-model"},
+                {text: "x-effect", link: "/guide/x-effect"},
             ]
         },
     ];
