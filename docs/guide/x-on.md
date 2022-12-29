@@ -223,6 +223,25 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 限流 throttle
 
+`.throttle` 类似于 `.debounce` 除了它会每隔 250 毫秒执行一次处理程序调用而不是无限期地延迟它。
+
+这对于可能重复和延长事件触发和使用 `.debounce` 不起作用的情况很有用，因为仍然希望每隔一段时间处理一次事件。 例如：
+
+```html
+<div x-data @scroll.window.throttle="console.log('window scroll throttle')"></div>
+```
+
+如果没有 `.throttle`，该 `console.log('window scroll throttle')` 方法将在用户向下滚动页面时被触发数百次，这会减慢网站的速度。
+
+而通过添加 `.throttle` 修饰符后确保 `console.log('window scroll throttle')` 仅每 250 毫秒调用一次。
+
+就像 `.debounce` 一样，可以为节流事件添加自定义持续时间：
+
+```html
+<div x-data @scroll.window.throttle.1500ms="console.log('window scroll throttle using custom seconds')"></div>
+```
+现在只会每 1500 毫秒调用一次表达式。
+
 ### 自身 self
 
 ### 驼峰 camel
