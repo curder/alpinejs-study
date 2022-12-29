@@ -6,9 +6,15 @@ export default defineConfig({
     title: "Alpine.js 学习",
     description: "Alpine.js 学习记录",
     lastUpdated: true,
+    head: [
+        [
+            'link',
+            { rel: 'icon', href: '/images/favicon.ico', crossorigin: '' }
+        ]
+    ],
     themeConfig: {
-        // logo: "https://alpinejs.dev/alpine_long.svg",
-        // siteTitle: "Alpine.js 学习",
+        logo: "/images/logo.svg",
+        siteTitle: "",
         outlineTitle: "章节导航",
         outline: 'deep',
         lastUpdatedText: "最后更新时间",
