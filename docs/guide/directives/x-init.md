@@ -41,13 +41,13 @@ Alpine.data('dropdown', () => ({
 
 ## 独立的 `x-init`
 
-可以添加 `x-init` 到 `x-data` 指令的 HTML 块内部或外部的任何元素。例如：
+可以添加 `x-init` 到 [`x-data`](./x-data.md) 指令的 HTML 块内部或外部的任何元素。例如：
 
 ```html
 <span x-init="console.log('Init')"></span>
 ```
 
-也可以将 `x-init` 指令单独于 `x-data` 之外的内部任意元素。 
+也可以将 `x-init` 指令单独于 [`x-data`](./x-data.md) 之外的内部任意元素。 
 
 ```html
 <div x-data>
