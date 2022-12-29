@@ -96,5 +96,13 @@ window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
   <div x-data @scroll.window.throttle.1500ms="console.log('window scroll throttle using custom seconds')"></div>
 </div>
 
+<div>
+  <button x-data @click.self="console.log('handle click.')">
+    Click Me
+
+    <img src="https://alpinejs.dev/alpine_long.svg">
+  </button>
+</div>
+
 </body>
 </html>

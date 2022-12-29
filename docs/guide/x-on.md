@@ -3,6 +3,7 @@
 `x-on` 允许在调度的 DOM 事件上运行代码。 如下示例，当单击按钮时会弹出提示。
 
 ```html
+
 <button type="button" x-data x-on:click="console.log('Hello')">Click Me</button>
 ```
 
@@ -31,6 +32,7 @@ Alpine 中支持将 `x-on:` 缩写成 `@`，例如：
 如果需要在表达式中访问原生的 JavaScript 事件对象，可以使用 Alpine 提供的 `$event` 获取事件属性。
 
 ```html
+
 <button @click="console.log($event.target.getAttribute('message'))" message="Hello World">Say Hi</button>
 ```
 
@@ -39,6 +41,7 @@ Alpine 中支持将 `x-on:` 缩写成 `@`，例如：
 另外，Alpine 还将事件对象传递给任何不带尾随括号引用的方法。例如：
 
 ```html
+
 <button x-data @click="handleClick">Click Me</button>
 <script>
 const handleClick = e => {
@@ -54,7 +57,7 @@ Alpine 可以很容易地监听特定键上 `keydown` 的 `keyup` 事件。
 下面是侦听输入元素内的 Enter 键的示例：
 
 ```html
-<input x-data type="text" @keyup.enter="console.log('Keyup enter submitted!')" />
+<input x-data type="text" @keyup.enter="console.log('Keyup enter submitted!')"/>
 ```
 
 同时也可以添加一些键修饰符以实现更复杂的侦听器。例如：
@@ -62,13 +65,14 @@ Alpine 可以很容易地监听特定键上 `keydown` 的 `keyup` 事件。
 按住并按下 **Shift** 键时运行的侦听 **Enter** 器，但在 **Enter** 单独按下时不会运行。
 
 ```html
-<input x-data type="text" @keyup.shift.enter="console.log('Keyup shift enter submitted!')" />
+<input x-data type="text" @keyup.shift.enter="console.log('Keyup shift enter submitted!')"/>
 ```
 
-可以直接使用通过 [`KeyboardEvent.keys`](https://developer.mozilla.org/zh-CN/docs/Web/API/UI_Events/Keyboard_event_key_values) 修饰符公开的任何有效键名，比如 `PageDown` 需要将它们转换为驼峰写法。
+可以直接使用通过 [`KeyboardEvent.keys`](https://developer.mozilla.org/zh-CN/docs/Web/API/UI_Events/Keyboard_event_key_values)
+修饰符公开的任何有效键名，比如 `PageDown` 需要将它们转换为驼峰写法。
 
 ```html
-<input x-data type="text" @keyup.page-down="console.log('Page down submitted!')" />
+<input x-data type="text" @keyup.page-down="console.log('Page down submitted!')"/>
 ```
 
 为了便于参考，这里列出了常用的修饰键。
@@ -96,8 +100,10 @@ AlpineJS 事件监听器是原生 DOM 事件监听器封装，因此它可以监
 下面是一个自定义 DOM 事件调度并监听它的组件示例：
 
 ```html
+
 <div x-data @custom-event="console.log('Click dispatchEvent button was clicked!')">
-    <button @click="$event.target.dispatchEvent(new CustomEvent('custom-event', { bubbles: true }))">Click dispatchEvent</button>
+  <button @click="$event.target.dispatchEvent(new CustomEvent('custom-event', { bubbles: true }))">Click dispatchEvent
+  </button>
 </div>
 ```
 
@@ -108,6 +114,7 @@ AlpineJS 事件监听器是原生 DOM 事件监听器封装，因此它可以监
 AlpineJS 提供一个魔法属性 `$dispatch` 重写的同一个组件。
 
 ```html
+
 <div x-data @custom-event="console.log('Click $dispatch button was Clicked!')">
   <button @click="$dispatch('custom-event')">Click $dispatch</button>
 </div>
@@ -116,12 +123,12 @@ AlpineJS 提供一个魔法属性 `$dispatch` 重写的同一个组件。
 当然，也可以在 JavaScript 中通过使用 `addEventListener()` 来监听 AlpineJS 中发布的自定义事件。如下：
 
 ```html
+
 <button x-data @click="$dispatch('my-custom-event', {key: 'value'})">Click $dispatch</button>
 <script>
 window.addEventListener('my-custom-event', (e) => console.log(e.detail.key))
 </script>
 ```
-
 
 ## 修饰符
 
@@ -132,6 +139,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 **`.prevent`** 相当于在浏览器事件对象的侦听器内部调用。 **`.preventDefault()`** 方法。
 
 ```html
+
 <form x-data @submit.prevent="console.log('Form submitted')" action="/url">
   <button type="submit">Submit</button>
 </form>
@@ -143,12 +151,15 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### 停止 stop
 
-类似于 `.prevent` 修饰符，`.stop` 修饰符相当于在浏览器事件对象内部调用 [`.stopPropagation()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/stopPropagation) 监听器。
-
+类似于 `.prevent` 修饰符，`.stop`
+修饰符相当于在浏览器事件对象内部调用 [`.stopPropagation()`](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/stopPropagation)
+监听器。
 
 ```html {2}
+
 <div x-data @click="console.log('We will not get logged')">
-  <button type="button" @click.stop>Click Me</button> // [!code focus]
+  <button type="button" @click.stop>Click Me</button>
+  // [!code focus]
 </div>
 ```
 
@@ -161,12 +172,13 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 下面是下拉组件示例：
 
 ```html {4}
-<div x-data="{ open: false }">
-    <button @click="open = ! open">Toggle</button>
 
-    <div x-show="open" @click.outside="open = false"> // [!code focus]
-        Contents
-    </div>
+<div x-data="{ open: false }">
+  <button @click="open = ! open">Toggle</button>
+
+  <div x-show="open" @click.outside="open = false"> // [!code focus]
+    Contents
+  </div>
 </div>
 ```
 
@@ -179,6 +191,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 `x-on` 可以添加 `.window` 修饰符，Alpine 将在页面的根对象 `window` 上注册事件监听器而不是元素本身。
 
 ```html
+
 <button x-data @keyup.escape.window="console.log('escape Window alarm')">Click Me</button>
 ```
 
@@ -189,6 +202,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 `.document` 工作方式类似于 `.window` 仅在 `document` 全局而不是全局上注册侦听器 `window`。
 
 ```html
+
 <button x-data @keyup.escape.document="console.log('escape document alarm')">Click Me</button>
 ```
 
@@ -197,6 +211,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 通过添加 `.once` 侦听器，可以确保处理程序仅被调用一次。
 
 ```html
+
 <button x-data @click.once="console.log('I will only log once')">Click Me</button>
 ```
 
@@ -207,8 +222,9 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 例如，如果有一个搜索字段在用户输入时触发网络请求，添加去抖动将防止网络请求在每次击键时触发。
 
 ```html
-<input x-data @input.debounce="fetch(`/some-uri/${$event.target.value}`)" />
+<input x-data @input.debounce="fetch(`/some-uri/${$event.target.value}`)"/>
 ```
+
 现在，不是在每次击键后调用 `fetch()`，而是只会在 250 毫秒没有击键后调用 `fetch()`。
 
 > 通过 `$event.target.value` 获取当前输入框的值。
@@ -216,7 +232,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 如果想延长或缩短去抖动时间，你可以通过在 `.debounce` 修饰符后面指定一个持续时间来实现，如下所示：
 
 ```html
-<input x-data @input.debounce.1500ms="fetch(`/some-uri/${$event.target.value}`)" />
+<input x-data @input.debounce.1500ms="fetch(`/some-uri/${$event.target.value}`)"/>
 ```
 
 现在 `fetch()` 只会在 500 毫秒不活动后调用。
@@ -228,6 +244,7 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 这对于可能重复和延长事件触发和使用 `.debounce` 不起作用的情况很有用，因为仍然希望每隔一段时间处理一次事件。 例如：
 
 ```html
+
 <div x-data @scroll.window.throttle="console.log('window scroll throttle')"></div>
 ```
 
@@ -238,11 +255,29 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 就像 `.debounce` 一样，可以为节流事件添加自定义持续时间：
 
 ```html
+
 <div x-data @scroll.window.throttle.1500ms="console.log('window scroll throttle using custom seconds')"></div>
 ```
+
 现在只会每 1500 毫秒调用一次表达式。
 
 ### 自身 self
+
+通过添加 `.self` 事件侦听器，可以确保事件起源于声明它的元素，而不是来自子元素。
+
+```html
+
+<button x-data @click.self="console.log('handle click.')">
+  Click Me
+
+  <img src="https://alpinejs.dev/alpine_long.svg">
+</button>
+```
+
+在上面的示例中，在 `<button>` 标签内有一个 `<img>` 标签。通常任何源自 `<button>` 元素内的点击（例如`<img>`）都会被 `@click`
+按钮上的侦听器接收到。
+
+但是在这种情况下，因为添加了一个 `.self`，所以只有单击按钮本身才会调用 click 表达式。而源自 `<img>` 元素的点击不会被处理。
 
 ### 驼峰 camel
 
