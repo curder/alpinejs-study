@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as l}from"./app.05b292db.js";const u=JSON.parse('{"title":"x-ref","description":"","frontmatter":{},"headers":[],"relativePath":"guide/x-ref.md","lastUpdated":1672297084000}'),o={name:"guide/x-ref.md"},p=l("",4),e=[p];function t(c,r,D,F,y,i){return n(),a("div",null,e)}const C=s(o,[["render",t]]);export{u as __pageData,C as default};

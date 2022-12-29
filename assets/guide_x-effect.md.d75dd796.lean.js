@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as e,a as o}from"./app.05b292db.js";const f=JSON.parse('{"title":"x-effect","description":"","frontmatter":{},"headers":[],"relativePath":"guide/x-effect.md","lastUpdated":1672296315000}'),l={name:"guide/x-effect.md"},n=o("",6),t=[n];function p(c,r,D,F,d,y){return e(),a("div",null,t)}const _=s(l,[["render",p]]);export{f as __pageData,_ as default};
