@@ -33,7 +33,7 @@
   - [`$nextTick`](./guide/magics/nextTick.md)
   - [`$root`](./guide/magics/root.md)
   - [`$data`](./guide/magics/data.md)
-  - `$id`
+  - [`$id`](./guide/magics/id.md)
 
 - 方法
   - `Alpine.data()` 重用数据对象并使用 `x-data` 引用它
