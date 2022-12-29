@@ -7,7 +7,7 @@ export default defineConfig({
     description: "Alpine.js 学习记录",
     lastUpdated: true,
     head: [
-        ['link', { rel: 'icon', href: '/alpinejs-study/images/favicon.ico' }],
+        ['link', {rel: 'icon', href: '/alpinejs-study/images/favicon.ico'}],
     ],
     themeConfig: {
         logo: "/images/logo.svg",
@@ -88,5 +88,13 @@ function sidebarGuide() {
                 },
             ]
         },
+        {
+            text: "组件",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                { text: 'Dropdown', link: "/guide/components/dropdown" },
+            ]
+        }
     ];
 }
