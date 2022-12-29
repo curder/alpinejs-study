@@ -176,6 +176,14 @@ AlpineJS 提供了许多指令修饰符来自定义事件侦听器的行为。
 
 ### window 对象
 
+`x-on` 可以添加 `.window` 修饰符，Alpine 将在页面的根对象 `window` 上注册事件监听器而不是元素本身。
+
+```html
+<button x-data @keyup.escape.window="console.log('escape Window alarm')">Click Me</button>
+```
+
+上面的代码片段将监听页面上任何位置按下的 `Esc` 转义键。
+
 ### 文档 document
 
 ### 去抖动 debounce
