@@ -26,7 +26,7 @@
 
 `x-bind` 最常用于根据 Alpine 状态在元素上设置特定的 CSS 类。
 
-下面的示例是一个简单的下拉切换，但将使用 `hidden` 类来切换元素，而不是使用 `x-show`。
+下面的示例是一个简单的下拉切换，但将使用 `hidden` 类来切换元素，而不是使用 [`x-show`](./x-show.md)。
 
 ```html
 
@@ -82,7 +82,7 @@ Alpine 提供了用于切换类的附加语法。
 
 该技术为其他方法提供了独特的优势。使用对象语法时，Alpine 不会保留应用于元素class属性的原始类。
 
-例如，如果你想在 Alpine 加载之前将 `hiddne` 类应用于一个元素，并使用 Alpine 来切换它的存在，只能使用对象语法来实现该行为：
+例如，如果你想在 Alpine 加载之前将 `hidden` 类应用于一个元素，并使用 Alpine 来切换它的存在，只能使用对象语法来实现该行为：
 
 ```html
 <div x-data="{ show: true }" class="hidden" :class="{ 'hidden': ! show }">Content</div>
@@ -109,7 +109,7 @@ Alpine 提供了用于切换类的附加语法。
 <div class="opacity-50 hidden"></div>
 ```
 
-如果hide为 false，DOM 元素将如下所示：
+如果 hide 为 false，DOM 元素将如下所示：
 
 ```html
 <div x-data="{ hide: false }"  class="opacity-50" :class="hide && 'hidden'"></div>
@@ -205,7 +205,7 @@ Alpine 提供了用于切换类的附加语法。
 ```
 
 ::: info 请注意
-当被 "绑定" 或 "应用" 的指令是 `x-for` 时，应该从回调中返回一个普通的表达式字符串。
+当被 "绑定" 或 "应用" 的指令是 [`x-for`](./x-for.md) 时，应该从回调中返回一个普通的表达式字符串。
 
 例如：`['x-for']() { return 'item in items' }`
 :::
