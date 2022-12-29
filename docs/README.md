@@ -35,7 +35,7 @@
   - [$data](./guide/magics/data.md)
   - [$id](./guide/magics/id.md)
 
-- 方法
+- 全局变量
   - `Alpine.data()` 重用数据对象并使用 `x-data` 引用它
   - `Alpine.store()` 使用 `$store` 声明可以从任何地方访问的全局、反应性数据
   - `Alpine.bind()`
