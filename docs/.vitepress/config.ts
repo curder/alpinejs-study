@@ -118,6 +118,7 @@ function sidebarComponents() {
             // collapsed: false,
             items: [
                 {text: 'Dropdown', link: "/guide/components/dropdown"},
+                {text: 'Modal', link: "/guide/components/modal"},
             ]
         },
     ];
