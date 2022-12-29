@@ -28,7 +28,7 @@
   - [`$el`](./guide/magics/el.md)
   - [`$refs`](./guide/magics/refs.md)
   - [`$store`](./guide/magics/store.md)
-  - `$watch`
+  - [`$watch`](./guide/magics/watch.md)
   - `$dispatch`
   - `$nextTick`
   - `$root`

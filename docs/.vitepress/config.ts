@@ -78,9 +78,9 @@ function sidebarGuide() {
                         {text: '$el', link: "/guide/magics/el"},
                         {text: "$refs", link: "/guide/magics/refs"},
                         {text: "$store", link: "/guide/magics/store"},
+                        {text: "$watch", link: "/guide/magics/watch"},
                     ],
                 },
-
             ]
         },
     ];

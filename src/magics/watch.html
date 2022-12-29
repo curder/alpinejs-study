@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Document</title>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+<div x-data="{ open: false }"
+     x-init="$watch('open', value => console.log(value))">
+  <button @click="open = ! open">Toggle Open</button>
+</div>
+
+<div x-data="{ foo: { bar: 'baz' }}"
+     x-init="$watch('foo.bar', value => console.log(value))">
+  <button @click="foo.bar = 'bob'">Toggle Open</button>
+</div>
+
+<!--get old value-->
+<div x-data="{ open: false }"
+     x-init="$watch('open', (value, oldValue) => console.log(`current: ${value}, old: ${oldValue}`))">
+  <button @click="open = ! open">Toggle Open</button>
+</div>
+
+<!--deep-->
+<div x-data="{ foo: { bar: 'baz' }}"
+     x-init="$watch('foo', (value, oldValue) => console.log(value, oldValue))">
+  <button @click="foo.bar = 'bob'">Toggle Open</button>
+</div>
+
+</body>
+</html>

@@ -3,3 +3,4 @@
 - [$el](./el.md)
 - [$refs](./refs.md)
 - [$store](./store.md)
+- [$watch](./watch.md)
