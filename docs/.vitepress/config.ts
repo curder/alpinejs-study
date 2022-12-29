@@ -81,6 +81,7 @@ function sidebarGuide() {
                         {text: "$watch", link: "/guide/magics/watch"},
                         {text: "$dispatch", link: "/guide/magics/dispatch"},
                         {text: "$nextTick", link: "/guide/magics/nextTick"},
+                        {text: "$root", link: "/guide/magics/root"},
                     ],
                 },
             ]

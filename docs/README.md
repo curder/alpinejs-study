@@ -31,7 +31,7 @@
   - [`$watch`](./guide/magics/watch.md)
   - [`$dispatch`](./guide/magics/dispatch.md)
   - [`$nextTick`](./guide/magics/nextTick.md)
-  - `$root`
+  - [`$root`](./guide/magics/root.md)
   - `$data`
   - `$id`
 

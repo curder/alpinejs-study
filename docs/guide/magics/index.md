@@ -6,3 +6,4 @@
 - [$watch](./watch.md)
 - [$dispatch](./dispatch.md)
 - [$nextTick](./nextTick.md)
+- [$root](./root.md)
