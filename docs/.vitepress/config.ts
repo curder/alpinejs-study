@@ -65,6 +65,7 @@ function sidebarGuide() {
                 {text: 'x-teleport', link: "/guide/directives/x-teleport"},
                 {text: 'x-modelable', link: "/guide/directives/x-modelable"},
                 {text: 'x-id', link: "/guide/directives/x-id"},
+                {text: '$el', link: "/guide/magics/el"},
             ]
         },
     ];
