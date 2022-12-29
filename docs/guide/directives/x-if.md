@@ -17,6 +17,6 @@
 </div>
 ```
 
-与 [`x-show`](x-show.md) 不同的是 [`x-if`](./x-if.md) 不支持使用 [`x-transition`](x-transition.md) 切换过渡。
+与 [`x-show`](x-show.md) 不同的是 [`x-if`](/x-if.md) 不支持使用 [`x-transition`](x-transition.md) 切换过渡。
 
 **请注意：** `<template>` 标签只能包含一个根级元素。
