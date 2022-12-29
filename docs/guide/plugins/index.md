@@ -1,5 +1,6 @@
 # 插件
 
-- [Mask](./mask.md)
-- [Intersect](./intersect.md)
-- [Persist](./persist.md)
+- [Mask](mask.md)
+- [Intersect](intersect.md)
+- [Persist](persist.md)
+- [Focus](focus.md)

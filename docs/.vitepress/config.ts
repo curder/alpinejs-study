@@ -140,6 +140,7 @@ function sidebarPlugins()
                 {text: 'Mask', link: "/guide/plugins/mask"},
                 {text: 'Intersect', link: "/guide/plugins/intersect"},
                 {text: "Persist", link: "/guide/plugins/persist"},
+                {text: "Focus", link: "/guide/plugins/focus"},
             ]
         }
     ];
