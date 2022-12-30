@@ -44,6 +44,7 @@ document.addEventListener('alpine:init', () => {
     },
 
     '@click'() {
+      console.log(this.$el); // 获取 DOM 元素
       this.doSomething()
     },
 

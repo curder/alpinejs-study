@@ -38,6 +38,7 @@ document.addEventListener('alpine:init', () => {
     },
 
     '@click'() {
+      console.log(this.$el); // 获取 DOM 元素
       this.doSomething()
     },
 
@@ -49,3 +50,5 @@ document.addEventListener('alpine:init', () => {
 </script>
 ```
 :::
+
+在方法内部可以通过 `this.$el` 获取 DOM 元素。
