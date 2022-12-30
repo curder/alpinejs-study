@@ -1,1 +1,0 @@
-import{_ as i,c as e,o as l,a}from"./app.0523925f.js";const x=JSON.parse('{"title":"Alpine.js 学习","description":"","frontmatter":{},"headers":[],"relativePath":"README.md","lastUpdated":1672317661000}'),t={name:"README.md"},r=a("",4),d=[r];function h(s,c,o,f,m,n){return l(),e("div",null,d)}const u=i(t,[["render",h]]);export{x as __pageData,u as default};
