@@ -7,18 +7,19 @@
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <title>Alpine.js Dropdown Component</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
-
+  <style>[x-cloak] { display: none !important; }</style>
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
 <div class="flex justify-center items-center min-h-screen bg-gray-50">
-  <div class="relative inline-block text-left">
+  <div class="relative inline-block text-left" x-id="['menu-button']" x-data="{ open: false }">
     <div>
-      <button id="menu-button"
+      <button :id="$id('menu-button')"
               aria-expanded="true"
               aria-haspopup="true"
               class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100"
-              type="button">
+              type="button"
+              @click="open = true">
         Options
         <!-- Heroicon name: mini/chevron-down -->
         <svg aria-hidden="true" class="-mr-1 ml-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20"
@@ -40,12 +41,20 @@
         From: "transform opacity-100 scale-100"
         To: "transform opacity-0 scale-95"
     -->
-    <div
-      aria-labelledby="menu-button"
-      aria-orientation="vertical"
-      class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-      role="menu" tabindex="-1">
-      <div class="py-1" role="none">
+    <div :aria-labelledby="$id('menu-button')"
+         aria-orientation="vertical"
+         class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+         role="menu"
+         tabindex="-1"
+         x-cloak
+         x-show="open"
+         x-transition:enter="transition ease-out duration-100"
+         x-transition:enter-end="transform opacity-100 scale-100"
+         x-transition:enter-start="transform opacity-0 scale-95"
+         x-transition:leave="transition ease-in duration-75"
+         x-transition:leave-end="transform opacity-0 scale-95"
+         x-transition:leave-start="transform opacity-100 scale-100">
+      <div class="py-1" role="none" @click.outside="open = false">
         <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
         <a id="menu-item-0" class="text-gray-700 block px-4 py-2 text-sm" href="#" role="menuitem" tabindex="-1">Account
           settings</a>
