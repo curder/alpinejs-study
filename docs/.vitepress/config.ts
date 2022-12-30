@@ -46,7 +46,7 @@ function nav() {
         {text: "全局变量", link: "/guide/globals/index", activeMatch: "/guide/globals/"},
         {
             text: "其他",
-            activeMatch: "guide/globals|components|plugins",
+            activeMatch: "guide/components|plugins/",
             items: [
                 {text: '组件', link: '/guide/components/index', activeMatch: '/guide/components/'},
                 {text: "插件", link: "/guide/plugins/index", activeMatch: "/guide/plugins/"},
