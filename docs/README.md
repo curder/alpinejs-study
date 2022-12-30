@@ -36,6 +36,6 @@
   - [$id](guide/magics/id.md)
 
 - 全局变量
-  - `Alpine.data()`
+  - [Alpine.data()](guide/globals/alpine-data.md)
   - `Alpine.store()`
   - `Alpine.bind()`

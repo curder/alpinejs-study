@@ -134,7 +134,7 @@ Alpine 中的一切都以 `x-data` 指令开始。
 
 ## 可复用的数据
 
-如果发现 `x-data` 中有重复的内容或者发现内联的语法相对冗长，可以使用 `Alpine.data()` 将 `x-data` 对象提取到组件外。
+如果发现 `x-data` 中有重复的内容或者发现内联的语法相对冗长，可以使用 [Alpine.data()](../globals/alpine-data.md) 将 `x-data` 对象提取到组件外。
 
 ```html
 
