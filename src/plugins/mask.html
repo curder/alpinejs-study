@@ -2,14 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <title>Document</title>
+  <script defer src="https://unpkg.com/@alpinejs/mask@3.x.x/dist/cdn.min.js"></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
 
+<!--x-mask-->
+<input placeholder="YYYY/MM/DD"
+       type="text"
+       x-data=""
+       x-mask="9999/99/99">
+
+<!--x-mask:dynamic-->
+<input type="text"
+       x-data=""
+       x-mask:dynamic="$input.startsWith('34') || $input.startsWith('37')
+          ? '9999 999999 99999' : '9999 9999 9999 9999'">
+
+<input x-data=""
+       x-mask:dynamic="creditCardMask">
+
+<script>
+const creditCardMask = input => input.startsWith('34') || input.startsWith('37')
+  ? '9999 999999 99999'
+  : '9999 9999 9999 9999';
+</script>
+
+<!--$money-->
+<input x-data="" x-mask:dynamic="$money($input)" placeholder="0.00" />
+<input x-data="" x-mask:dynamic="$money($input, ',')" placeholder="0,00" />
 </body>
 </html>
