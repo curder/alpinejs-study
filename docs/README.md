@@ -37,5 +37,5 @@
 
 - 全局变量
   - [Alpine.data()](guide/globals/alpine-data.md)
-  - `Alpine.store()`
-  - `Alpine.bind()`
+  - [Alpine.store()](guide/globals/alpine-store.md)
+  - [Alpine.bind()](guide/globals/alpine-bind.md)
