@@ -35,7 +35,7 @@
   - [$data](guide/magics/data.md)
   - [$id](guide/magics/id.md)
 
-- 全局变量
+- [全局变量](guide/globals/index.md)
   - [Alpine.data()](guide/globals/alpine-data.md)
   - [Alpine.store()](guide/globals/alpine-store.md)
   - [Alpine.bind()](guide/globals/alpine-bind.md)
