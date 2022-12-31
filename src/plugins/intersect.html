@@ -26,5 +26,44 @@
     <div x-show="! shown">&nbsp;</div>
   </div>
 </div>
+
+<!--:leave-->
+<div x-data
+     x-ref="root"
+     style="height: 60px;overflow-y: scroll;border: solid 1px #eaeaea;">
+  <a href="javascript:void(0);"
+     @click.prevent="$refs.root.scrollTo({top: $refs.root.scrollHeight, behavior: 'smooth'})">向下滚动👇</a>
+
+  <div style="height: 50vh"></div>
+  <div x-data="{ shown: false }"
+       x-intersect:enter="shown = true"
+       x-intersect:leave="shown = false">
+    <div x-show="shown" x-transition>
+      I'm in the viewport!
+      <a href="javascript:void(0);"
+         @click.prevent="$refs.root.scrollTo({top: -$refs.root.scrollHeight, behavior: 'smooth'})">向上滚动👇</a>
+    </div>
+    <div x-show="! shown">&nbsp;</div>
+  </div>
+</div>
+
+<!--.once-->
+<div x-data
+     x-ref="root"
+     style="height: 60px;overflow-y: scroll;border: solid 1px #eaeaea;">
+  <a href="javascript:void(0);"
+     @click.prevent="$refs.root.scrollTo({top: $refs.root.scrollHeight, behavior: 'smooth'})">向下滚动👇</a>
+
+  <div style="height: 50vh"></div>
+  <div x-data="{ shown: false }"
+       x-intersect:enter="shown = true"
+       x-intersect:leave.once="shown = false">
+    <div x-show="shown" x-transition>
+      I'm in the viewport!
+    </div>
+    <div x-show="! shown">&nbsp;</div>
+  </div>
+</div>
+
 </body>
 </html>
