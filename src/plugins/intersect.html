@@ -5,11 +5,26 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Alpine.js Intersect Plugin.</title>
+  <script defer src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+<div x-data
+     x-ref="root"
+     style="height: 60px;overflow-y: scroll;border: solid 1px #eaeaea;">
+  <a href="javascript:void(0);"
+     @click.prevent="$refs.root.scrollTo({top: $refs.root.scrollHeight, behavior: 'smooth'})">向下滚动👇</a>
 
+  <div style="height: 50vh"></div>
+  <div x-data="{ shown: false }"
+       x-intersect="shown = true">
+    <div x-show="shown" x-transition>
+      I'm in the viewport!
+    </div>
+    <div x-show="! shown">&nbsp;</div>
+  </div>
+</div>
 </body>
 </html>
