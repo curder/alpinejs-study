@@ -5,11 +5,57 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Alpine.js Persist Plugin.</title>
+  <script defer src="https://unpkg.com/@alpinejs/persist@3.x.x/dist/cdn.min.js"></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+<!--$persist-->
+<!--<div x-data="{ count: $persist(0) }">-->
+<!--  <button x-on:click="count++">Increment</button>-->
+
+<!--  <span x-text="count"></span>-->
+<!--</div>-->
+
+<!--.as-->
+<div x-data="{ count: $persist(0).as('customize-count') }">
+  <button x-on:click="count++">Increment</button>
+
+  <span x-text="count"></span>
+</div>
+
+<!--sessionStorage-->
+<div x-data="{ count: $persist(0).using(sessionStorage) }">
+  <button x-on:click="count++">Increment</button>
+
+  <span x-text="count"></span>
+</div>
+
+<!--cookieStorage-->
+<div x-data="{ count: $persist(0).using(cookieStorage) }">
+  <button x-on:click="count++">Increment</button>
+
+  <span x-text="count"></span>
+</div>
+<script>
+window.cookieStorage = {
+  getItem(key) {
+    let cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+      let cookie = cookies[i].split("=");
+      if (key == cookie[0].trim()) {
+        return decodeURIComponent(cookie[1]);
+      }
+    }
+    return null;
+  },
+  setItem(key, value) {
+    document.cookie = key+' = '+encodeURIComponent(value)
+  }
+}
+</script>
+
 
 </body>
 </html>
