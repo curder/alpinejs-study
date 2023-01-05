@@ -1,0 +1,1 @@
+import{_ as e,c as a,o as t,a as i}from"./app.370d5e4a.js";const m=JSON.parse('{"title":"全局变量","description":"","frontmatter":{},"headers":[],"relativePath":"guide/globals/index.md","lastUpdated":1672318281000}'),n={name:"guide/globals/index.md"},l=i("",2),r=[l];function d(s,o,_,c,p,h){return t(),a("div",null,r)}const u=e(n,[["render",d]]);export{m as __pageData,u as default};
