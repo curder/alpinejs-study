@@ -5,11 +5,41 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Alpine.js Collapse Plugin.</title>
+  <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+<div x-data="{ expanded: false }">
+  <button @click="expanded = ! expanded">Toggle Content</button>
+
+  <div x-show="expanded" x-collapse>
+    <p>x-collapse 只能存在于已经有 x-show 指令的元素上。</p>
+
+    <p>当添加到一个 x-show 元素时，当通过 x-collapse 指令改变高度属性切换元素的可见性时，将平滑地“折叠”和“展开”元素。</p>
+  </div>
+</div>
+
+<div x-data="{ expanded: false }">
+  <button @click="expanded = ! expanded">Toggle Content</button>
+
+  <div x-show="expanded" x-collapse.duration.1000ms>
+    <p>x-collapse 只能存在于已经有 x-show 指令的元素上。</p>
+
+    <p>当添加到一个 x-show 元素时，当通过 x-collapse 指令改变高度属性切换元素的可见性时，将平滑地“折叠”和“展开”元素。</p>
+  </div>
+</div>
+
+<div x-data="{ expanded: false }">
+  <button @click="expanded = ! expanded">Toggle Content</button>
+
+  <div x-show="expanded" x-collapse.min.50px>
+    <p>x-collapse 只能存在于已经有 x-show 指令的元素上。</p>
+
+    <p>当添加到一个 x-show 元素时，当通过 x-collapse 指令改变高度属性切换元素的可见性时，将平滑地“折叠”和“展开”元素。</p>
+  </div>
+</div>
 
 </body>
 </html>
