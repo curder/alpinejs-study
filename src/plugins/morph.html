@@ -2,14 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Alpine.js Morph Plugins.</title>
+  <script defer src="https://unpkg.com/@alpinejs/morph@3.x.x/dist/cdn.min.js"></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+<div x-data="{ message: 'Change me, then press the button!' }">
+  <input type="text" x-model="message">
+  <span x-text="message"></span>
+</div>
 
+<button>Run Morph</button>
+
+<script>
+document.querySelector('button').addEventListener('click', () => {
+  let el = document.querySelector('div')
+
+  Alpine.morph(el, `
+            <div x-data="{ message: 'Change me, then press the button!' }">
+                <h2>See how new elements have been added</h2>
+
+                <input type="text" x-model="message">
+                <span x-text="message"></span>
+
+                <h2>but the state of this component hasn't changed? Magical.</h2>
+            </div>
+        `)
+})
+</script>
 </body>
 </html>
