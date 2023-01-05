@@ -2,14 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        name="viewport">
+  <meta content="ie=edge" http-equiv="X-UA-Compatible">
+  <title>Alpine.js Focus Plugin.</title>
+  <script defer src="https://unpkg.com/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+<!--x-trap-->
+<div x-data="{ open: false }">
+  <button @click="open = true">Open Dialog</button>
 
+  <div x-show="open" x-trap="open">
+    <input placeholder="Some input..." type="text">
+    <input placeholder="Some other input..." type="text">
+    <button @click="open = false">Close Dialog</button>
+  </div>
+</div>
+
+<!--nesting-->
+<div x-data="{ open: false }">
+  <button @click="open = true">Open Dialog</button>
+
+  <span x-show="open" x-trap="open">
+
+        <input placeholder="Some input..." type="text">
+        <input placeholder="Some other input..." type="text">
+
+        <div x-data="{ open: false }">
+            <button @click="open = true">Open Nested Dialog</button>
+
+            <span x-show="open" x-trap="open">
+                <input placeholder="Some input..." type="text">
+                <input placeholder="Some other input..." type="text">
+                <button @click="open = false">Close Nested Dialog</button>
+            </span>
+        </div>
+
+        <button @click="open = false">Close Dialog</button>
+    </span>
+</div>
+
+<!-- When `open` is `false`: -->
+<div x-data="{ open: false }">
+  <div x-trap.inert="open">
+    ...
+  </div>
+
+  <div> ...</div>
+
+</div>
+
+<!--.noscroll-->
+<div style="padding-top: 400px;" x-data="{ open: false }">
+  <button @click="open = true">Open Dialog</button>
+
+  <div x-show="open" x-trap.noscroll="open">
+    Dialog Contents
+    <button @click="open = false">Close Dialog</button>
+  </div>
+</div>
+
+
+<!--.noreturn-->
+<div x-data="{ open: false }" x-trap.noreturn="open">
+  <input
+    placeholder="Search for something"
+    type="search"
+    @keyup="open =  ['a', 'aa', 'aaa', 'aaaa', 'aaaaa', 'aaaaaa'].includes($event.target.value)"/>
+
+  <div x-show="open">
+    Search results
+
+    <button @click="open = false">Close</button>
+  </div>
+</div>
+
+
+<!--.next() and .previous()-->
+<div x-data=""
+     @keydown.right="$focus.next()"
+     @keydown.left="$focus.previous()"
+>
+  <button>First</button>
+  <button>Second</button>
+  <button>Third</button>
+</div>
+
+
+<!--.wrap()-->
+<div x-data=""
+     @keydown.right="$focus.wrap().next()"
+     @keydown.left="$focus.wrap().previous()"
+>
+  <button>First</button>
+  <button>Second</button>
+  <button>Third</button>
+</div>
+
+
+<!--.within()-->
+<div x-data="{ consoleFocusElement() { console.log($refs.buttons) } }">
+  <button @click="$focus.within($refs.buttons).first(); consoleFocusElement()">Focus "First"</button>
+  <button @click="$focus.within($refs.buttons).last(); consoleFocusElement()">Focus "Last"</button>
+
+  <div
+    x-ref="buttons"
+    @keydown.right="$focus.wrap().next()"
+    @keydown.left="$focus.wrap().previous()"
+  >
+    <button>First</button>
+    <button>Second</button>
+    <button>Third</button>
+  </div>
+</div>
 </body>
 </html>
