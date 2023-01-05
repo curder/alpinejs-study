@@ -45,11 +45,11 @@ Alpine.js 的 Focus 插件允许更方便的管理页面上的焦点。
 ::: code-group
 
 ```bash [yarn]
-yarn add @alpinejsfocus/
+yarn add @alpinejs/focus
 ```
 
 ```bash [npm]
-npm install @alpinejsfocus/
+npm install @alpinejs/focus
 ```
 
 :::
