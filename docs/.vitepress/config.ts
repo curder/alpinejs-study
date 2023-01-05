@@ -32,7 +32,7 @@ export default defineConfig({
             "/guide/directives": sidebarDirectives(),
             "/guide/magics": sidebarMagics(),
             "/guide/globals": sideGlobals(),
-            '/guide/components': sidebarComponents(),
+            // '/guide/components': sidebarComponents(),
             "guide/plugins": sidebarPlugins(),
         }
     }
@@ -48,7 +48,7 @@ function nav() {
             text: "其他",
             activeMatch: "guide/components|plugins/",
             items: [
-                {text: '组件', link: '/guide/components/index', activeMatch: '/guide/components/'},
+                // {text: '组件', link: '/guide/components/index', activeMatch: '/guide/components/'},
                 {text: "插件", link: "/guide/plugins/index", activeMatch: "/guide/plugins/"},
             ]
         },
