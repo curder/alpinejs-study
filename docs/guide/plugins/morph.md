@@ -19,11 +19,9 @@ Alpine 的 Morph 插件允许将页面上的元素变换为提供的 HTML 模板
   <title>Alpine.js</title>
   <!--...-->
   <!-- Alpine Morph Plugins -->
-  <script defer src="https://unpkg.com/@alpinejs/morph@3.x.x/dist/cdn.min.js"></script>
-  // [!code focus]
+  <script defer src="https://unpkg.com/@alpinejs/morph@3.x.x/dist/cdn.min.js"></script>// [!code focus]
 
-  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  // [!code focus]
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>// [!code focus]
 </head>
 <!--...-->
 </html>
