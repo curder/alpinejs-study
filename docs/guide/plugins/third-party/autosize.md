@@ -15,8 +15,8 @@
 <html lang="en">
 <head>
   <!--...-->
-  <title>Alpine.js Clipboard Plugins</title>
-  <!-- Alpine Clipboard Plugins -->
+  <title>Alpine.js Autosize Plugins</title>
+  <!-- Alpine Autosize Plugins -->
   <script defer src="https://unpkg.com/@marcreichel/alpine-autosize@1.x.x/dist/alpine-autosize.min.js"></script> // [!code focus]
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script> // [!code focus]
