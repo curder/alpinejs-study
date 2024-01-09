@@ -81,6 +81,7 @@ const sidebar: DefaultTheme.Sidebar = {
             text: "第三方插件",
             items: [
                 {text: 'Clipboard', link: "/guide/plugins/third-party/clipboard"},
+                {text: 'Autosize', link: "/guide/plugins/third-party/autosize"},
             ]
         }
     ],

@@ -13,3 +13,4 @@
 ## 第三方插件
 
 - [@ryangjchandler/alpine-clipboard](third-party/clipboard.md) 用于将文本复制到用户的剪贴板。
+- [@marcreichel/alpine-autosize](https://github.com/marcreichel/alpine-autosize) 自动调整 `textarea` 输入框大小以适合其内容。
