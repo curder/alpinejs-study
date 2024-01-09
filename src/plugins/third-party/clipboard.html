@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alpine.js Clipboard Plugins</title>
+  <script defer src="https://unpkg.com/@ryangjchandler/alpine-clipboard@2.x.x/dist/alpine-clipboard.js"></script>
+
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+<div x-data="{ input: '' }">
+  <input x-model="input">
+  <button type="button" @click="$clipboard(input)">
+    Copy to Clipboard
+  </button>
+</div>
+<hr>
+<div x-data="{
+  input: '',
+  copied: () => {
+    const initButtonText = $refs.button.innerHTML
+    $refs.button.innerHTML = 'Copied!';
+    setTimeout(() => $refs.button.innerHTML = initButtonText, 1500)
+  }
+ }">
+  <input x-model="input">
+  <button type="button" @click="$clipboard(input).then(() => copied())" x-ref="button">
+    Copy to Clipboard
+  </button>
+</div>
+
+<hr>
+<div x-data="{ items: {name: 'curder', age: 33} }">
+  <button type="button" @click="$clipboard(items)">Copy to Clipboard</button>
+</div>
+
+<hr>
+<div x-data="{ input: 'Foo!' }">
+  <button x-clipboard="input">
+    Copy to Clipboard
+  </button>
+</div>
+<hr>
+
+<button x-data x-clipboard.raw="Hello world">
+  Copy to Clipboard
+</button>
+</body>
+</html>

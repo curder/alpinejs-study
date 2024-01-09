@@ -64,20 +64,26 @@ const sidebar: DefaultTheme.Sidebar = {
             {text: "Popover", link: "/guide/components/popover"},
         ]
     }],
-    "guide/plugins": [{
-        text: "插件",
-        // collapsible: true,
-        // collapsed: false,
-        items: [
-            {text: 'Mask', link: "/guide/plugins/mask"},
-            {text: 'Intersect', link: "/guide/plugins/intersect"},
-            {text: "Persist", link: "/guide/plugins/persist"},
-            {text: "Focus", link: "/guide/plugins/focus"},
-            {text: "Collapse", link: "/guide/plugins/collapse"},
-            {text: "Anchor", link: "/guide/plugins/anchor"},
-            {text: "Morph", link: "/guide/plugins/morph"},
-        ]
-    }],
+    "guide/plugins": [
+        {
+            text: "官方插件",
+            items: [
+                {text: 'Mask', link: "/guide/plugins/mask"},
+                {text: 'Intersect', link: "/guide/plugins/intersect"},
+                {text: "Persist", link: "/guide/plugins/persist"},
+                {text: "Focus", link: "/guide/plugins/focus"},
+                {text: "Collapse", link: "/guide/plugins/collapse"},
+                {text: "Anchor", link: "/guide/plugins/anchor"},
+                {text: "Morph", link: "/guide/plugins/morph"},
+            ]
+        },
+        {
+            text: "第三方插件",
+            items: [
+                {text: 'Clipboard', link: "/guide/plugins/third-party/clipboard"},
+            ]
+        }
+    ],
 }
 
 export default sidebar

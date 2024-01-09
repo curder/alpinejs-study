@@ -9,3 +9,7 @@
 - [Collapse](collapse.md) 使用流畅的动画展开和折叠元素。
 - [Anchor](anchor.md) 将元素的位置锚定到页面上的另一个元素。
 - [Morph](morph.md) 将页面上的元素变换为提供的 `HTML` 模板，同时在变换的元素中保留任何浏览器状态或 `Alpine` 状态。
+
+## 第三方插件
+
+- [@ryangjchandler/alpine-clipboard](third-party/clipboard.md) 用于将文本复制到用户的剪贴板。
