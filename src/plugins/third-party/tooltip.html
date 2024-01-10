@@ -6,14 +6,33 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Alpine Tooltip plugin</title>
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css" />
   <!-- Alpine Tooltip Plugins -->
   <script defer src="https://unpkg.com/@ryangjchandler/alpine-tooltip@2.x.x/dist/cdn.min.js"></script>
 
   <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 <body>
+
 <div x-data="{ tooltip: 'This is crazy!' }">
   <button x-tooltip="tooltip">Hover for info!</button>
 </div>
+
+<hr>
+
+<button x-data x-tooltip.raw.border.30="Hello, world!">
+  Raw Tooltip
+</button>
+
+<hr>
+
+<!--<button x-data="false" x-tooltip.raw="Hello world">-->
+<!--  Disable Tooltip-->
+<!--</button>-->
+
+<hr>
+
+<button x-data @click="$tooltip('Hello, world')">Click me</button>
+
 </body>
 </html>
