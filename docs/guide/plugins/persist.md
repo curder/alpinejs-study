@@ -29,11 +29,11 @@ Persist 插件允许在页面加载期间保持 Alpine 状态。
 
 生产环境中，建议在链接中锁定特定版本号，以避免新版本中的变更造成问题。
 
-例如，锁定版本为 3.10.5 (最新版本):
+例如，锁定版本为 3.14.1 (最新版本):
 
 ```html
 <!-- Alpine Plugins -->
-<script defer src="https://unpkg.com/@alpinejs/persist@3.10.5/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/@alpinejs/persist@3.14.1/dist/cdn.min.js"></script>
 ```
 
 

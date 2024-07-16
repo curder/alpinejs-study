@@ -30,11 +30,11 @@ Alpine.js 的 Focus 插件允许更方便的管理页面上的焦点。
 
 生产环境中，建议在链接中锁定特定版本号，以避免新版本中的变更造成问题。
 
-例如，锁定版本为 3.10.5 (最新版本):
+例如，锁定版本为 3.14.1 (最新版本):
 
 ```html
 <!-- Alpine Plugins -->
-<script defer src="https://unpkg.com/@alpinejs/focus@3.10.5/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/@alpinejs/focus@3.14.1/dist/cdn.min.js"></script>
 ```
 
 

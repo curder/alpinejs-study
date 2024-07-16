@@ -29,11 +29,11 @@ Alpine 的 Morph 插件允许将页面上的元素变换为提供的 HTML 模板
 
 生产环境中，建议在链接中锁定特定版本号，以避免新版本中的变更造成问题。
 
-例如，锁定版本为 3.10.5 (最新版本):
+例如，锁定版本为 3.14.1 (最新版本):
 
 ```html
 <!-- Alpine Plugins -->
-<script defer src="https://unpkg.com/@alpinejs/morph@3.10.5/dist/cdn.min.js"></script>
+<script defer src="https://unpkg.com/@alpinejs/morph@3.14.1/dist/cdn.min.js"></script>
 ```
 
 ### 作为 NPM 模块
