@@ -4,6 +4,7 @@
 
 - [Mask](mask.md) 指定用户内容输入格式。
 - [Intersect](intersect.md) 在元素进入浏览器视图时做出反应。
+- [Resize](resize.md) 元素大小改变时轻松做出反应。
 - [Persist](persist.md) 在页面加载期间保持 `Alpine` 状态。
 - [Focus](focus.md) 更方便的管理页面上的焦点。
 - [Collapse](collapse.md) 使用流畅的动画展开和折叠元素。

@@ -53,7 +53,7 @@ npm install @alpinejs/intersect
 
 :::
 
-现在将 Mask 导入到包中并像这样初始化它：
+现在将 Intersect 导入到包中并像这样初始化它：
 
 ```javascript
 import Alpine from 'alpinejs'

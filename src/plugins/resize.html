@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alpine.js Resize Plugins</title>
+    <!-- Alpine Resize Plugins -->
+    <script defer src="https://unpkg.com/@alpinejs/resize@3.x.x/dist/cdn.min.js"></script>
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        .demo {
+            background: white;
+            padding: 1rem;
+            border-width: 1px;
+            border-radius: .25rem;
+            border-color: #d8dee9;
+        }
+    </style>
+</head>
+<body>
+<div class="demo">
+    <div x-data="{ width: 0, height: 0 }"
+         x-resize="width = $width; height = $height"
+    >
+        <p x-text="'Width: ' + width + 'px'"></p>
+        <p x-text="'Height: ' + height + 'px'"></p>
+    </div>
+</div>
+
+<div class="demo">
+    <div x-data="{ width: 0, height: 0 }" x-resize.document="width = $width; height = $height">
+        <i>Resize your browser window to see the document width and height values change.</i>
+        <br><br>
+        <p x-text="'Width: ' + width + 'px'"></p>
+        <p x-text="'Height: ' + height + 'px'"></p>
+    </div>
+</div>
+</body>
+</html>

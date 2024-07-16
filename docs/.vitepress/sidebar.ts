@@ -70,6 +70,7 @@ const sidebar: DefaultTheme.Sidebar = {
             items: [
                 {text: 'Mask', link: "/guide/plugins/mask"},
                 {text: 'Intersect', link: "/guide/plugins/intersect"},
+                {text: 'Resize', link: "/guide/plugins/resize"},
                 {text: "Persist", link: "/guide/plugins/persist"},
                 {text: "Focus", link: "/guide/plugins/focus"},
                 {text: "Collapse", link: "/guide/plugins/collapse"},
