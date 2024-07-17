@@ -89,3 +89,11 @@ Alpine.start()
 ```html
 <div x-resize.document="...">
 ```
+
+### `.initial`
+
+默认情况下，`x-resize` 只会在元素大小改变时触发。如果需要在元素初始加载时触发，可以添加 `.initial` 修饰符。
+
+```html
+<div x-resize.initial="console.log($width, $height)">...</div>
+```

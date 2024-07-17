@@ -24,6 +24,7 @@
 <div class="demo">
     <div x-data="{ width: 0, height: 0 }"
          x-resize="width = $width; height = $height"
+         x-resize.initial="console.log($width, $height)"
     >
         <p x-text="'Width: ' + width + 'px'"></p>
         <p x-text="'Height: ' + height + 'px'"></p>
