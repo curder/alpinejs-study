@@ -16,3 +16,4 @@
 - [@ryangjchandler/alpine-clipboard](third-party/clipboard.md) 用于将文本复制到用户的剪贴板。
 - [@marcreichel/alpine-autosize](https://github.com/marcreichel/alpine-autosize) 自动调整 `textarea` 输入框大小以适合其内容。
 - [@ryangjchandler/alpine-tooltip](https://github.com/ryangjchandler/alpine-tooltip) 添加工具提示。
+- [@imacrayon/alpine-ajax](third-party/ajax.md) 提供了一种简单的方法来发出 AJAX 请求并在页面上呈现内容。
