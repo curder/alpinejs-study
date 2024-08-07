@@ -85,6 +85,7 @@ const sidebar: DefaultTheme.Sidebar = {
                 {text: "Autosize", link: "/guide/plugins/third-party/autosize"},
                 {text: "Tooltip", link: "/guide/plugins/third-party/tooltip"},
                 {text: "Ajax", link: "/guide/plugins/third-party/ajax"},
+                {text: "Maska", link: "/guide/plugins/third-party/maska"},
             ]
         }
     ],
